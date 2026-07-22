@@ -103,7 +103,7 @@
 Recent activity (auto-synced every 6h):
 ```
 <!--START_SECTION:activity-->
-<!-- github-activity-readme populates this list automatically -->
+1. 🚀 Published release [Seed Code CLI v1.2.0.3](https://github.com/Alshahriar-07/seedcode-cli/releases/tag/v1.2.0.3) in [Alshahriar-07/seedcode-cli](https://github.com/Alshahriar-07/seedcode-cli)
 <!--END_SECTION:activity-->
 
 <!-- ─────────────────────────  CONTACT · $ ./contact.sh  ──────────────────────── -->
