@@ -13,7 +13,7 @@
 
 <br/>
 
-<!-- Location chip (kept out of the SVG so it stays searchable text) -->
+<!-- Location chip (kept out of the SVG so it stays searchable text)  -->
 `📍 Bangladesh 🇧🇩`  ·  `● open to collaboration`
 
 </div>
