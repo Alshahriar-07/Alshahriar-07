@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ══════════════════════════════════════════════════════════════
+     terminal.svg · animated hero terminal (CSS keyframes, no JS)
+     Types whoami + about with a left-to-right reveal + blink.
+     Honors prefers-reduced-motion → shows full text, no motion.
+     ══════════════════════════════════════════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 296" width="800" height="296"
+     font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace"
+     role="img" aria-labelledby="t-title t-desc">
+  <title id="t-title">Al Shahriar Sowan — animated terminal</title>
+  <desc id="t-desc">whoami: Al Shahriar Sowan, Python Developer. Focus: AI desktop apps, automation, open source. Goal: orchestrating 100+ AI agents.</desc>
+
+  <style>
+    /* each line is revealed by a clip rect scaling in x from 0 → 1 */
+    .line rect { transform: scaleX(0); transform-origin: 24px 0; }
+    .l1 rect { animation: wipe .45s .2s forwards; }
+    .l2 rect { animation: wipe .50s .8s forwards; }
+    .l3 rect { animation: wipe .45s 1.5s forwards; }
+    .l4 rect { animation: wipe .55s 2.1s forwards; }
+    .l5 rect { animation: wipe .55s 2.8s forwards; }
+    .l6 rect { animation: wipe .55s 3.5s forwards; }
+    .l7 rect { animation: wipe .30s 4.2s forwards; }
+    .cursor  { opacity: 0; animation: blink 1s 4.6s step-end infinite; }
+    @keyframes wipe  { to { transform: scaleX(1); } }
+    @keyframes blink { 50% { opacity: 1; } }
+    /* accessibility: no motion, reveal everything immediately */
+    @media (prefers-reduced-motion: reduce) {
+      .line rect { transform: scaleX(1); animation: none; }
+      .cursor { opacity: 1; animation: none; }
+    }
+  </style>
+
+  <defs>
+    <clipPath id="l1" class="line l1"><rect x="24" y="70"  width="760" height="22"/></clipPath>
+    <clipPath id="l2" class="line l2"><rect x="24" y="97"  width="760" height="22"/></clipPath>
+    <clipPath id="l3" class="line l3"><rect x="24" y="124" width="760" height="22"/></clipPath>
+    <clipPath id="l4" class="line l4"><rect x="24" y="151" width="760" height="22"/></clipPath>
+    <clipPath id="l5" class="line l5"><rect x="24" y="178" width="760" height="22"/></clipPath>
+    <clipPath id="l6" class="line l6"><rect x="24" y="205" width="760" height="22"/></clipPath>
+    <clipPath id="l7" class="line l7"><rect x="24" y="232" width="760" height="22"/></clipPath>
+  </defs>
+
+  <!-- window -->
+  <rect x="1" y="1" width="798" height="294" rx="12" fill="#111111" stroke="#2A2A2A" stroke-width="1.5"/>
+  <!-- title bar -->
+  <path d="M1 13 a12 12 0 0 1 12 -12 h774 a12 12 0 0 1 12 12 v31 h-798 z" fill="#0d0d0d" stroke="#2A2A2A" stroke-width="1.5"/>
+  <circle cx="24" cy="22" r="6" fill="#FF5F56"/>
+  <circle cx="44" cy="22" r="6" fill="#FFBD2E"/>
+  <circle cx="64" cy="22" r="6" fill="#27C93F"/>
+  <text x="400" y="26" text-anchor="middle" font-size="12.5" fill="#A1A1AA">alshahriar@github: ~/zsh</text>
+
+  <!-- typed body -->
+  <g font-size="15.5" xml:space="preserve">
+    <g clip-path="url(#l1)"><text x="24" y="86"><tspan fill="#D4A574">$</tspan> <tspan fill="#F5F5F5">whoami</tspan></text></g>
+    <g clip-path="url(#l2)"><text x="24" y="113"><tspan fill="#F5F5F5">Al Shahriar Sowan</tspan> <tspan fill="#A1A1AA">— Python Developer &amp; Vibe Coder</tspan></text></g>
+    <g clip-path="url(#l3)"><text x="24" y="140"><tspan fill="#D4A574">$</tspan> <tspan fill="#F5F5F5">cat about.txt</tspan></text></g>
+    <g clip-path="url(#l4)"><text x="24" y="167"><tspan fill="#A1A1AA">Focus    :</tspan> <tspan fill="#F5F5F5">AI Desktop Apps · Automation · Open Source</tspan></text></g>
+    <g clip-path="url(#l5)"><text x="24" y="194"><tspan fill="#A1A1AA">Learning :</tspan> <tspan fill="#F5F5F5">Advanced AI Agent Architectures</tspan></text></g>
+    <g clip-path="url(#l6)"><text x="24" y="221"><tspan fill="#A1A1AA">Goal     :</tspan> <tspan fill="#F5F5F5">Orchestrating </tspan><tspan fill="#4ADE80">100+ AI agents</tspan></text></g>
+    <g clip-path="url(#l7)"><text x="24" y="248"><tspan fill="#D4A574">$</tspan></text></g>
+  </g>
+
+  <!-- blinking cursor -->
+  <rect class="cursor" x="40" y="234" width="9" height="17" fill="#D4A574"/>
+</svg>

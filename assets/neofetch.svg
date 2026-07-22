@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ══════════════════════════════════════════════════════════════
+     neofetch.svg · animated system-info card (CSS keyframes)
+     ASCII logo + line-by-line reveal of system stats + palette bar.
+     Honors prefers-reduced-motion.
+     ══════════════════════════════════════════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 396" width="820" height="396"
+     font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace"
+     role="img" aria-labelledby="n-title n-desc">
+  <title id="n-title">neofetch — system info</title>
+  <desc id="n-desc">OS Windows 11 and Linux (Mint, Kali). Editor VS Code and Neovim. Languages Python, JavaScript, HTML/CSS. Cloud Cloudflare, GCP, Vercel, Supabase. Runtime Docker, Node, Python. GPU NVIDIA. Package managers pip, npm, chocolatey.</desc>
+
+  <style>
+    .row { opacity: 0; transform: translateX(8px); animation: enter .5s forwards ease-out; }
+    .logo{ opacity: 0; animation: fade .8s .1s forwards; }
+    .c0{animation-delay:.30s}.c1{animation-delay:.38s}.c2{animation-delay:.46s}.c3{animation-delay:.54s}
+    .c4{animation-delay:.62s}.c5{animation-delay:.70s}.c6{animation-delay:.78s}.c7{animation-delay:.86s}
+    .c8{animation-delay:.94s}.c9{animation-delay:1.02s}.c10{animation-delay:1.10s}.c11{animation-delay:1.18s}
+    @keyframes enter { to { opacity: 1; transform: translateX(0); } }
+    @keyframes fade  { to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .row,.logo { opacity: 1; transform: none; animation: none; }
+    }
+  </style>
+
+  <rect x="1" y="1" width="818" height="394" rx="12" fill="#111111" stroke="#2A2A2A" stroke-width="1.5"/>
+
+  <!-- Kali dragon logo (merged from Kali.svg) -->
+  <g class="logo" transform="translate(40,72) scale(0.5)" fill="#D4A574" stroke="none">
+    <path d="m9.833 36.432s173.14-5.632 250.66 29.439c19.157 6.4 15.83 11.521 15.83 11.521s-5.121 47.103 31.232 57.344c36.352 10.239 58.367 6.399 108.54 36.863-1.792-5.632-1.282-9.984-1.282-9.984s11.01 9.984 14.339 15.615c3.328 5.632 10.751 1.281 13.825 3.071 3.07 1.793 15.102 21.248 15.102 21.248v4.608s11.007 13.825 23.808 14.848c-6.4 5.12-14.848 11.52-14.848 11.52s-11.009-14.591-39.424-28.671c-4.352-4.609-4.863-13.825-4.863-13.825s1.279-3.583-31.233-15.103c-32.512-11.521-65.279-28.671-100.35-6.912-35.07 21.759-52.735 107.78 70.912 115.96 15.522 2.244 39.636 8.599 56.063 22.272 42.751 29.696 87.293 104.96 78.334 146.86-7.422-18.352-15.103-80.304-76.543-125.61-19.198-17.921-28.927-20.991-59.646-27.395-30.72-6.397-75.264-1.79-103.42-41.727-28.159-39.935 0-92.413 15.873-100.35 3.839-3.071 13.055-11.008 13.055-11.008s-19.2-45.567-19.162-63.998c-71.46-44.807-256.81-43.784-256.81-43.784l-6.145-0.768 6.148-2.048z"/>
+    <path d="m265.78 102.04s-116.19 13.605-214.5 75.848c79.853-34.008 56.568-24.287 79.853-34.008 23.286-9.72 72.845-24.8 138.52-28.608-1.45-2.79-3.87-13.23-3.87-13.23z"/>
+  </g>
+
+  <!-- info column -->
+  <g font-size="13" xml:space="preserve">
+    <text class="row c0" x="330" y="52" fill="#D4A574">alshahriar<tspan fill="#A1A1AA">@</tspan>github</text>
+    <line class="row c1" x1="330" y1="62" x2="792" y2="62" stroke="#2A2A2A"/>
+
+    <text class="row c1"  x="330" y="88"  fill="#A1A1AA">OS          <tspan fill="#F5F5F5">Windows 11 · Linux (Mint, Kali)</tspan></text>
+    <text class="row c2"  x="330" y="114" fill="#A1A1AA">Host        <tspan fill="#F5F5F5">Al Shahriar Sowan</tspan></text>
+    <text class="row c3"  x="330" y="140" fill="#A1A1AA">Kernel      <tspan fill="#F5F5F5">vibe-coding 5.0</tspan></text>
+    <text class="row c4"  x="330" y="166" fill="#A1A1AA">Uptime      <tspan fill="#F5F5F5">4+ years</tspan></text>
+    <text class="row c5"  x="330" y="192" fill="#A1A1AA">Shell       <tspan fill="#F5F5F5">bash · zsh</tspan></text>
+    <text class="row c6"  x="330" y="218" fill="#A1A1AA">Editor      <tspan fill="#F5F5F5">VS Code · Neovim</tspan></text>
+    <text class="row c7"  x="330" y="244" fill="#A1A1AA">Languages   <tspan fill="#F5F5F5">Python · JavaScript · HTML/CSS</tspan></text>
+    <text class="row c8"  x="330" y="270" fill="#A1A1AA">Cloud       <tspan fill="#F5F5F5">Cloudflare · GCP · Vercel · Supabase</tspan></text>
+    <text class="row c9"  x="330" y="296" fill="#A1A1AA">Runtime     <tspan fill="#F5F5F5">Docker · Node · Python</tspan></text>
+    <text class="row c10" x="330" y="322" fill="#A1A1AA">GPU         <tspan fill="#F5F5F5">NVIDIA</tspan></text>
+    <text class="row c11" x="330" y="348" fill="#A1A1AA">Pkg Manager <tspan fill="#F5F5F5">pip · npm · chocolatey</tspan></text>
+
+    <!-- palette swatches -->
+    <g class="row c11">
+      <rect x="330" y="362" width="20" height="12" rx="2" fill="#09090B" stroke="#2A2A2A"/>
+      <rect x="354" y="362" width="20" height="12" rx="2" fill="#111111" stroke="#2A2A2A"/>
+      <rect x="378" y="362" width="20" height="12" rx="2" fill="#2A2A2A"/>
+      <rect x="402" y="362" width="20" height="12" rx="2" fill="#A1A1AA"/>
+      <rect x="426" y="362" width="20" height="12" rx="2" fill="#F5F5F5"/>
+      <rect x="450" y="362" width="20" height="12" rx="2" fill="#D4A574"/>
+      <rect x="474" y="362" width="20" height="12" rx="2" fill="#4ADE80"/>
+    </g>
+  </g>
+</svg>

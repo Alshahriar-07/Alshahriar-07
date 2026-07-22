@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ══════════════════════════════════════════════════════════════
+     skills.svg · animated proficiency bars (CSS keyframes)
+     Bars grow from the left with an easeOutExpo curve, staggered.
+     Honors prefers-reduced-motion → bars shown filled, no motion.
+     ══════════════════════════════════════════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 372" width="760" height="372"
+     font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace"
+     role="img" aria-labelledby="s-title s-desc">
+  <title id="s-title">Skill proficiency</title>
+  <desc id="s-desc">AI/ML Agents 100, HTML/CSS 90, Git/GitHub 88, Python 85, Docker 75, JavaScript 70, Cloud 60, UI/UX 55 percent.</desc>
+
+  <style>
+    .fill { transform: scaleX(0); transform-origin: 250px 0; animation: grow 1s forwards cubic-bezier(.16,1,.3,1); }
+    .r1{animation-delay:.10s}.r2{animation-delay:.20s}.r3{animation-delay:.30s}.r4{animation-delay:.40s}
+    .r5{animation-delay:.50s}.r6{animation-delay:.60s}.r7{animation-delay:.70s}.r8{animation-delay:.80s}
+    @keyframes grow { to { transform: scaleX(1); } }
+    @media (prefers-reduced-motion: reduce) { .fill { transform: scaleX(1); animation: none; } }
+  </style>
+
+  <rect x="1" y="1" width="758" height="370" rx="12" fill="#111111" stroke="#2A2A2A" stroke-width="1.5"/>
+  <text x="24" y="34" font-size="13" fill="#A1A1AA" xml:space="preserve"><tspan fill="#D4A574">$</tspan> cat skills.md</text>
+
+  <!-- track x=250, full width=360 (=100%). fill widths are pre-scaled to the pct. -->
+  <g font-size="13.5" fill="#F5F5F5">
+    <text x="24" y="76">AI / ML Agents</text>
+    <rect x="250" y="65" width="360" height="12" rx="6" fill="#1c1c1c" stroke="#2A2A2A"/>
+    <rect class="fill r1" x="250" y="65" width="360" height="12" rx="6" fill="#4ADE80"/>
+    <text x="628" y="76" fill="#A1A1AA">100%</text>
+
+    <text x="24" y="112">HTML / CSS</text>
+    <rect x="250" y="101" width="360" height="12" rx="6" fill="#1c1c1c" stroke="#2A2A2A"/>
+    <rect class="fill r2" x="250" y="101" width="324" height="12" rx="6" fill="#D4A574"/>
+    <text x="628" y="112" fill="#A1A1AA">90%</text>
+
+    <text x="24" y="148">Git / GitHub</text>
+    <rect x="250" y="137" width="360" height="12" rx="6" fill="#1c1c1c" stroke="#2A2A2A"/>
+    <rect class="fill r3" x="250" y="137" width="317" height="12" rx="6" fill="#D4A574"/>
+    <text x="628" y="148" fill="#A1A1AA">88%</text>
+
+    <text x="24" y="184">Python</text>
+    <rect x="250" y="173" width="360" height="12" rx="6" fill="#1c1c1c" stroke="#2A2A2A"/>
+    <rect class="fill r4" x="250" y="173" width="306" height="12" rx="6" fill="#D4A574"/>
+    <text x="628" y="184" fill="#A1A1AA">85%</text>
+
+    <text x="24" y="220">Docker</text>
+    <rect x="250" y="209" width="360" height="12" rx="6" fill="#1c1c1c" stroke="#2A2A2A"/>
+    <rect class="fill r5" x="250" y="209" width="270" height="12" rx="6" fill="#D4A574"/>
+    <text x="628" y="220" fill="#A1A1AA">75%</text>
+
+    <text x="24" y="256">JavaScript</text>
+    <rect x="250" y="245" width="360" height="12" rx="6" fill="#1c1c1c" stroke="#2A2A2A"/>
+    <rect class="fill r6" x="250" y="245" width="252" height="12" rx="6" fill="#D4A574"/>
+    <text x="628" y="256" fill="#A1A1AA">70%</text>
+
+    <text x="24" y="292">Cloud (GCP · CF)</text>
+    <rect x="250" y="281" width="360" height="12" rx="6" fill="#1c1c1c" stroke="#2A2A2A"/>
+    <rect class="fill r7" x="250" y="281" width="216" height="12" rx="6" fill="#D4A574"/>
+    <text x="628" y="292" fill="#A1A1AA">60%</text>
+
+    <text x="24" y="328">UI / UX (Figma)</text>
+    <rect x="250" y="317" width="360" height="12" rx="6" fill="#1c1c1c" stroke="#2A2A2A"/>
+    <rect class="fill r8" x="250" y="317" width="198" height="12" rx="6" fill="#D4A574"/>
+    <text x="628" y="328" fill="#A1A1AA">55%</text>
+  </g>
+</svg>
