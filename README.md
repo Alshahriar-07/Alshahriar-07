@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:09090B,35:3B82F6,70:8B5CF6,100:22C55E&height=230&section=header&text=Al%20Shahriar%20Sayon&fontSize=56&fontColor=FAFAFA&fontAlignY=34&desc=Computer%20Science%20Student%20%E2%80%A2%20Full%20Stack%20Developer%20%E2%80%A2%20UI%2FUX%20Designer%20%E2%80%A2%20AI%20Enthusiast&descAlignY=54&descSize=15&animation=fadeIn" width="100%" alt="Al Shahriar Sowan" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:09090B,35:3B82F6,70:8B5CF6,100:22C55E&height=230&section=header&text=Al%20Shahriar%20Sowan&fontSize=56&fontColor=FAFAFA&fontAlignY=34&desc=Computer%20Science%20Student%20%E2%80%A2%20Full%20Stack%20Developer%20%E2%80%A2%20UI%2FUX%20Designer%20%E2%80%A2%20AI%20Enthusiast&descAlignY=54&descSize=15&animation=fadeIn" width="100%" alt="Al Shahriar Sowan" />
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1200&color=22C55E&center=true&vCenter=true&width=760&height=52&lines=Building+premium+web+experiences;Crafting+AI-powered+tools+and+automation;Designing+interfaces+that+feel+alive;Turning+complex+ideas+into+elegant+products" alt="Typing SVG" />
 
