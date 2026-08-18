@@ -262,16 +262,54 @@ Architecture, decisions, and product direction stay under my control — AI just
 
 ## <a id="github"></a>📊 GitHub
 
+<div align="center">
+
+<a href="https://github.com/Alshahriar-07"><img src="https://img.shields.io/badge/View_Full_Profile-18181B?style=for-the-badge&logo=github&logoColor=FAFAFA" /></a>
+
+</div>
+
+<br/>
+
+**Pinned Repositories**
+
 <table width="100%">
 <tr>
-<td width="50%"><img src="https://github-readme-stats.vercel.app/api?username=Alshahriar-07&show_icons=true&hide_border=true&bg_color=09090B&title_color=22C55E&icon_color=8B5CF6&text_color=D4D4D8" width="100%"/></td>
-<td width="50%"><img src="https://github-readme-streak-stats.herokuapp.com/?user=Alshahriar-07&hide_border=true&background=09090B&ring=22C55E&fire=8B5CF6&currStreakLabel=FAFAFA" width="100%"/></td>
+<td width="50%" valign="top">
+
+**[seedcode-cli](https://github.com/Alshahriar-07/seedcode-cli)**
+A production-ready AI coding CLI supporting OpenRouter, Ollama, agent mode, file operations, and Git workflows.
+
+![Language](https://img.shields.io/github/languages/top/Alshahriar-07/seedcode-cli?style=flat-square&label=&color=22C55E) ![Stars](https://img.shields.io/github/stars/Alshahriar-07/seedcode-cli?style=flat-square&label=%E2%98%85&color=8B5CF6) ![Last Commit](https://img.shields.io/github/last-commit/Alshahriar-07/seedcode-cli?style=flat-square&label=updated&color=3B82F6)
+
+</td>
+<td width="50%" valign="top">
+
+**[Hmouse](https://github.com/Alshahriar-07/Hmouse)**
+Control your Windows cursor using only your hand and a webcam — no physical mouse required.
+
+![Language](https://img.shields.io/github/languages/top/Alshahriar-07/Hmouse?style=flat-square&label=&color=22C55E) ![Stars](https://img.shields.io/github/stars/Alshahriar-07/Hmouse?style=flat-square&label=%E2%98%85&color=8B5CF6) ![Last Commit](https://img.shields.io/github/last-commit/Alshahriar-07/Hmouse?style=flat-square&label=updated&color=3B82F6)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[portfolio](https://github.com/Alshahriar-07/portfolio)**
+My personal portfolio site.
+
+![Language](https://img.shields.io/github/languages/top/Alshahriar-07/portfolio?style=flat-square&label=&color=22C55E) ![Stars](https://img.shields.io/github/stars/Alshahriar-07/portfolio?style=flat-square&label=%E2%98%85&color=8B5CF6) ![Last Commit](https://img.shields.io/github/last-commit/Alshahriar-07/portfolio?style=flat-square&label=updated&color=3B82F6)
+
+</td>
+<td width="50%" valign="top">
+
+**[mr-bean-game-Main-](https://github.com/Alshahriar-07/mr-bean-game-Main-)**
+A small Python game project — Bean Run.
+
+![Language](https://img.shields.io/github/languages/top/Alshahriar-07/mr-bean-game-Main-?style=flat-square&label=&color=22C55E) ![Stars](https://img.shields.io/github/stars/Alshahriar-07/mr-bean-game-Main-?style=flat-square&label=%E2%98%85&color=8B5CF6) ![Last Commit](https://img.shields.io/github/last-commit/Alshahriar-07/mr-bean-game-Main-?style=flat-square&label=updated&color=3B82F6)
+
+</td>
 </tr>
 </table>
-
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alshahriar-07&layout=compact&hide_border=true&bg_color=09090B&title_color=22C55E&text_color=D4D4D8" />
-</div>
 
 <br/>
 
