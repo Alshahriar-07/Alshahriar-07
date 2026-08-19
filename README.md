@@ -2,7 +2,7 @@
 <tr>
 <td width="62%" valign="top">
 
-# Al Shahriar Sayon
+# Al Shahriar Sowan
 
 **Frontend Developer · AI Tool Builder · Android app builder**
 
