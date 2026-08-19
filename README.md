@@ -85,10 +85,19 @@ What I build:
 <tr><td><b>Other Tools</b></td><td>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" width="32" height="32" alt="Qt / PySide6"/>
 <img src="https://img.shields.io/badge/Pygame-000000?style=flat-square&logo=python&logoColor=white" height="28" alt="Pygame"/>
-<img src="https://cdn.simpleicons.org/figma/F24E1E" width="32" height="32" alt="Figma"/>
-<img src="https://cdn.simpleicons.org/canva/00C4CC" width="32" height="32" alt="Canva"/>
-<img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" width="32" height="32" alt="Adobe Photoshop"/>
-<img src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" width="32" height="32" alt="Adobe Illustrator"/>
+
+<!-- Figma -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="32" height="32" alt="Figma"/>
+
+<!-- Canva -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" width="32" height="32" alt="Canva"/>
+
+<!-- Adobe Photoshop -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" width="32" height="32" alt="Adobe Photoshop"/>
+
+<!-- Adobe Illustrator -->
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" width="32" height="32" alt="Adobe Illustrator"/>
+
 </td></tr>
 </table>
 
