@@ -2,9 +2,9 @@
 <tr>
 <td width="62%" valign="top">
 
-# Al Shahriar Sowan
+# Al Shahriar Sayon
 
-**Frontend Developer · AI Tool Builder · Android app builder**
+**Frontend Developer · AI Tool Builder · Android Developer · Ai tools researcher**
 
 I build web applications, AI-powered tools, and developer utilities — focused on clean UI, practical functionality, and AI integration. Currently studying Computer Science & Technology in Bangladesh, and building the **Seed** ecosystem of developer tools.
 
@@ -53,19 +53,39 @@ What I build:
 </td></tr>
 <tr><td><b>Database</b></td><td>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" width="32" height="32" alt="Supabase"/>
+<img src="https://cdn.simpleicons.org/oracle" width="32" height="32" alt="Oracle"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="32" height="32" alt="MongoDB"/>
+<img src="https://cdn.simpleicons.org/cloudflare" width="32" height="32" alt="Cloudflare R2"/>
+<img src="https://img.shields.io/badge/IndexedDB-000000?style=flat-square" height="28" alt="IndexedDB"/>
 </td></tr>
 <tr><td><b>DevOps</b></td><td>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" width="32" height="32" alt="Vercel" style="background:white;border-radius:4px;"/>
+<img src="https://cdn.simpleicons.org/netlify" width="32" height="32" alt="Netlify"/>
+<img src="https://cdn.simpleicons.org/githubpages" width="32" height="32" alt="GitHub Pages" style="background:white;border-radius:4px;"/>
+<img src="https://cdn.simpleicons.org/cloudflare" width="32" height="32" alt="Cloudflare"/>
 </td></tr>
 <tr><td><b>Version Control</b></td><td>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="32" height="32" alt="Git"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" height="32" alt="GitHub" style="background:white;border-radius:4px;"/>
 </td></tr>
+<tr><td><b>Operating Systems</b></td><td>
+<img src="https://www.icosix.com/icon/423/windows-11" width="32" height="32" alt="Windows"/>
+<img src="https://cdn.simpleicons.org/linuxmint" width="32" height="32" alt="Linux Mint"/>
+<img src="https://cdn.simpleicons.org/parrotsecurity" width="32" height="32" alt="Parrot OS"/>
+<img src="https://cdn.simpleicons.org/tails" width="32" height="32" alt="Tails" style="background:white;border-radius:4px;"/>
+<img src="https://cdn.simpleicons.org/kalilinux" width="32" height="32" alt="Kali Linux" style="background:white;border-radius:4px;"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg" width="32" height="32" alt="Arch Linux"/>
+</td></tr>
+<tr><td><b>AI</b></td><td>
+<img src="https://cdn.simpleicons.org/claude" width="32" height="32" alt="Claude Code"/>
+<img src="https://img.shields.io/badge/OpenCode-000000?style=flat-square" height="28" alt="OpenCode"/>
+<img src="https://img.shields.io/badge/Seed_Code_CLI-000000?style=flat-square" height="28" alt="Seed Code CLI"/>
+<img src="https://img.shields.io/badge/OpenRouter-6E56CF?style=flat-square" height="28" alt="OpenRouter"/>
+<img src="https://cdn.simpleicons.org/ollama" width="32" height="32" alt="Ollama" style="background:white;border-radius:4px;"/>
+</td></tr>
 <tr><td><b>Other Tools</b></td><td>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" width="32" height="32" alt="Qt / PySide6"/>
 <img src="https://img.shields.io/badge/Pygame-000000?style=flat-square&logo=python&logoColor=white" height="28" alt="Pygame"/>
-<img src="https://img.shields.io/badge/OpenRouter-6E56CF?style=flat-square" height="28" alt="OpenRouter"/>
-<img src="https://img.shields.io/badge/Ollama-000000?style=flat-square" height="28" alt="Ollama"/>
 </td></tr>
 </table>
 
@@ -80,7 +100,7 @@ AI-powered chat application with multi-provider support, streaming responses, ma
 **Stack:** Next.js · TypeScript · Tailwind CSS · Node.js
 
 🔗 **Live:** [seedcode-chat.vercel.app](https://seedcode-chat.vercel.app/)
-🐙 **GitHub:** [SeedCode Cli](https://github.com/Alshahriar-07/seedcode-cli)
+🐙 **GitHub:** [Alshahriar-07](https://github.com/Alshahriar-07)
 
 <br/>
 
