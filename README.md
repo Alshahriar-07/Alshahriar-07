@@ -4,7 +4,7 @@
 
 # Al Shahriar Sowan
 
-**Frontend Developer · AI Tool Builder · Android Developer · Ai tools researcher**
+**Frontend Designer & Developer · AI Tool Builder · Android Developer · Ai tools researcher**
 
 I build web applications, AI-powered tools, and developer utilities — focused on clean UI, practical functionality, and AI integration. Currently studying Computer Science & Technology in Bangladesh, and building the **Seed** ecosystem of developer tools.
 
