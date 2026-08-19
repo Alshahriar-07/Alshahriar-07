@@ -4,7 +4,7 @@
 
 # Al Shahriar Sayon
 
-**Frontend Developer · AI Tool Builder · Software Engineer**
+**Frontend Developer · AI Tool Builder · Android app builder**
 
 I build web applications, AI-powered tools, and developer utilities — focused on clean UI, practical functionality, and AI integration. Currently studying Computer Science & Technology in Bangladesh, and building the **Seed** ecosystem of developer tools.
 
@@ -80,7 +80,7 @@ AI-powered chat application with multi-provider support, streaming responses, ma
 **Stack:** Next.js · TypeScript · Tailwind CSS · Node.js
 
 🔗 **Live:** [seedcode-chat.vercel.app](https://seedcode-chat.vercel.app/)
-🐙 **GitHub:** [Alshahriar-07](https://github.com/Alshahriar-07)
+🐙 **GitHub:** [SeedCode Cli](https://github.com/Alshahriar-07/seedcode-cli)
 
 <br/>
 
