@@ -177,6 +177,6 @@ Stack: Python, PySide6
 
 <br/>
 
-## 📊 GitHub Statistics
-https://githubcard.com/Alshahriar-07.svg?d=75Oykp08UxEL
+## 📊 GitHub Card
+[https://githubcard.com/Alshahriar-07.svg?d=75Oykp08UxEL](https://githubcard.com/Alshahriar-07.svg?d=75Oykp08UxEL)
 
