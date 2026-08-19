@@ -105,7 +105,7 @@ What I build:
 
 ## Featured Project
 
-<img src="https://raw.githubusercontent.com/Alshahriar-07/seedcode-cli/refs/heads/main/assets/windows/seedcode.ico" height="28" alt="Seed Code CLI"/>  ###Seed Code Chat
+<img src="https://raw.githubusercontent.com/Alshahriar-07/seedcode-cli/refs/heads/main/assets/windows/seedcode.ico" height="28" alt="Seed Code CLI"/>  Seed Code Chat
 
 AI-powered chat application with multi-provider support, streaming responses, markdown rendering, code syntax highlighting, and chat history — available as web and Android versions.
 
