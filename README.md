@@ -82,10 +82,13 @@ What I build:
 <img src="https://img.shields.io/badge/Seed_Code_CLI-000000?style=flat-square" height="28" alt="Seed Code CLI"/>
 <img src="https://img.shields.io/badge/OpenRouter-6E56CF?style=flat-square" height="28" alt="OpenRouter"/>
 <img src="https://cdn.simpleicons.org/ollama" width="32" height="32" alt="Ollama" style="background:white;border-radius:4px;"/>
-</td></tr>
 <tr><td><b>Other Tools</b></td><td>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" width="32" height="32" alt="Qt / PySide6"/>
 <img src="https://img.shields.io/badge/Pygame-000000?style=flat-square&logo=python&logoColor=white" height="28" alt="Pygame"/>
+<img src="https://cdn.simpleicons.org/figma/F24E1E" width="32" height="32" alt="Figma"/>
+<img src="https://cdn.simpleicons.org/canva/00C4CC" width="32" height="32" alt="Canva"/>
+<img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" width="32" height="32" alt="Adobe Photoshop"/>
+<img src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" width="32" height="32" alt="Adobe Illustrator"/>
 </td></tr>
 </table>
 
