@@ -1,5 +1,5 @@
-<h1 align="center">Hi there, I'm Al Shahriar Sayon 👋</h1>
-<h3 align="center">🚀 Frontend Developer × AI Tool Builder × Software Engineer</h3>
+<h1 align="center">Hi there, I'm Al Shahriar Sowann 👋</h1>
+<h3 align="center"> Frontend Developer - AI Tool Builder - Android App Builder </h3>
 
 <p align="center">
   <a href="https://git.io/typing-svg">
@@ -104,12 +104,12 @@ Constantly experimenting with new technologies, AI models and software architect
 ### 📈 Activity & Stats
 
 <p align="center">
-  <img src="https://github-stats-extended.vercel.app/api?username=alshahriarsayon&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=alshahriarsayon&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
+  <img src="https://github-stats-extended.vercel.app/api?username=Alshahriar-07&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Alshahriar-07&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=alshahriarsayon&theme=tokyonight&hide_border=true" alt="Streak Stats" />
+  <img src="https://streak-stats.demolab.com/?user=Alshahriar-07&theme=tokyonight&hide_border=true" alt="Streak Stats" />
 </p>
 
 ---
@@ -120,13 +120,13 @@ Constantly experimenting with new technologies, AI models and software architect
   <a href="mailto:alshahriarsayon425@gmail.com">
     <img src="https://img.shields.io/badge/Email-alshahriarsayon425%40gmail.com-0078D4?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-  <a href="https://github.com/alshahriarsayon">
-    <img src="https://img.shields.io/badge/GitHub-Al_Shahriar_Sayon-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <a href="https://github.com/Alshahriar-07">
+    <img src="https://img.shields.io/badge/GitHub-Alshahriar-07-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://api.visitorbadge.io/api/visitors?path=alshahriarsayon&countColor=%2322C55E&style=flat" alt="Profile Visitors" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=Alshahriar-07&countColor=%2322C55E&style=flat" alt="Profile Visitors" />
 </p>
 
 <p align="center"><i>Designed & Engineered with ❤️ by Al Shahriar Sayon</i></p>
