@@ -179,11 +179,4 @@ Stack: Python, PySide6
 
 ## 📊 GitHub Statistics
 
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Alshahriar-07&show_icons=true&theme=transparent&hide_border=true&text_color=ffffff&title_color=ffffff&icon_color=ffffff" alt="Al Shahriar Sayon's GitHub Stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alshahriar-07&layout=compact&theme=transparent&hide_border=true&text_color=ffffff&title_color=ffffff" alt="Top Languages"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Alshahriar-07&theme=transparent&hide_border=true&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&sideLabels=ffffff&dates=ffffff" alt="GitHub Streak"/>
-
-</div>
+![GitHubCard](https://githubcard.com/Alshahriar-07.svg)
