@@ -178,5 +178,47 @@ Stack: Python, PySide6
 <br/>
 
 
-<img src="https://githubcard.com/Alshahriar-07.svg?d=75Oykp08UxEL" alt="GitHub Card">
+<!-- ==================== GITHUB STATS ==================== -->
+
+<div align="center">
+
+<h2>📊 GitHub Stats</h2>
+
+<img
+  src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Alshahriar-07&theme=github_dark"
+  alt="GitHub Stats"
+/>
+
+</div>
+
+<br>
+
+<!-- ==================== TOP LANGUAGES ==================== -->
+
+<div align="center">
+
+<h2>💻 Top Languages</h2>
+
+<img
+  src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Alshahriar-07&theme=github_dark"
+  alt="Top Languages"
+/>
+
+</div>
+
+<br>
+
+<!-- ==================== CONTRIBUTION GRAPH ==================== -->
+
+<div align="center">
+
+<h2>📈 Contribution Graph</h2>
+
+<img
+  src="https://github-readme-activity-graph.vercel.app/graph?username=Alshahriar-07&theme=github-compact&hide_border=true&area=true"
+  width="100%"
+  alt="GitHub Contribution Graph"
+/>
+
+</div>
 
