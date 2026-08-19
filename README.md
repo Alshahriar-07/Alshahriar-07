@@ -53,7 +53,7 @@ What I build:
 </td></tr>
 <tr><td><b>Database</b></td><td>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" width="32" height="32" alt="Supabase"/>
-<img src="https://cdn.simpleicons.org/oracle" width="32" height="32" alt="Oracle"/>
+<img src="https://worldvectorlogo.com/logo/oracle-2" width="32" height="32" alt="Oracle"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="32" height="32" alt="MongoDB"/>
 <img src="https://cdn.simpleicons.org/cloudflare" width="32" height="32" alt="Cloudflare R2"/>
 <img src="https://img.shields.io/badge/IndexedDB-000000?style=flat-square" height="28" alt="IndexedDB"/>
@@ -69,7 +69,7 @@ What I build:
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" height="32" alt="GitHub" style="background:white;border-radius:4px;"/>
 </td></tr>
 <tr><td><b>Operating Systems</b></td><td>
-<img src="https://www.icosix.com/icon/423/windows-11" width="32" height="32" alt="Windows"/>
+<img src="https://techicons.dev/icons/windows11" width="32" height="32" alt="Windows"/>
 <img src="https://cdn.simpleicons.org/linuxmint" width="32" height="32" alt="Linux Mint"/>
 <img src="https://cdn.simpleicons.org/parrotsecurity" width="32" height="32" alt="Parrot OS"/>
 <img src="https://cdn.simpleicons.org/tails" width="32" height="32" alt="Tails" style="background:white;border-radius:4px;"/>
@@ -79,7 +79,7 @@ What I build:
 <tr><td><b>AI</b></td><td>
 <img src="https://cdn.simpleicons.org/claude" width="32" height="32" alt="Claude Code"/>
 <img src="https://img.shields.io/badge/OpenCode-000000?style=flat-square" height="28" alt="OpenCode"/>
-<img src="https://img.shields.io/badge/Seed_Code_CLI-000000?style=flat-square" height="28" alt="Seed Code CLI"/>
+<img src="https://seedcode-app.vercel.app/assets/icon.png" height="28" alt="Seed Code CLI"/>
 <img src="https://img.shields.io/badge/OpenRouter-6E56CF?style=flat-square" height="28" alt="OpenRouter"/>
 <img src="https://cdn.simpleicons.org/ollama" width="32" height="32" alt="Ollama" style="background:white;border-radius:4px;"/>
 </td></tr>
