@@ -1,236 +1,293 @@
 <table>
 <tr>
-<td width="62%" valign="top">
+<td width="65%" valign="top">
 
 # Al Shahriar Sowan
 
-**Frontend Designer & Developer · AI Tool Builder · Android Developer · Ai tools researcher**
+**Software Developer · AI Coding Agent Developer · Frontend Developer · Android Developer**
 
-I build web applications, AI-powered tools, and developer utilities — focused on clean UI, practical functionality, and AI integration. Currently studying Computer Science & Technology in Bangladesh, and building the **Seed** ecosystem of developer tools.
+I build AI-powered applications, developer tools, web platforms, and experimental software. My work focuses on practical functionality, thoughtful UI/UX, and integrating AI into real-world development workflows.
 
-<a href="https://alshahriarsayon.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"/></a>
-<a href="https://www.linkedin.com/in/alshahriarsowan"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="mailto:alshahriarsayon425@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+Currently studying Computer Science & Technology at Dhaka Polytechnic Institute, Bangladesh, while independently developing the **SeedCode ecosystem**.
+
+<a href="https://alshahriarsayon.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white"/></a> <a href="https://www.linkedin.com/in/alshahriarsowan"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a> <a href="mailto:alshahriarsayon425@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white"/></a> <a href="https://github.com/Alshahriar-07"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/></a>
 
 </td>
-<td width="38%" align="center">
-<img src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" width="260"/>
+<td width="35%" align="center">
+
+<img src="https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif" width="240"/>
+
 </td>
 </tr>
 </table>
 
-<br/>
+---
 
 ## About Me
 
-I'm a frontend developer and AI tool builder from Bangladesh, studying Computer Science & Technology at Dhaka Polytechnic Institute. I like building things end-to-end — from UI to backend logic — with a preference for dark, developer-oriented interfaces over generic templates.
+I'm a developer and independent software builder from Bangladesh, currently studying Computer Science & Technology at Dhaka Polytechnic Institute.
 
-What I build:
+I enjoy building projects from the ground up, experimenting with AI models, developing coding agents, and creating useful software for developers.
 
-- 🌐 Web applications
-- 🤖 AI-powered tools
-- 🛠️ Developer tools
-- 🖥️ Desktop applications
-- 🧪 Experimental / creative software projects
+My primary interests include:
 
-<br/>
+* AI-powered applications and coding agents
+* Frontend and full-stack web development
+* Developer tools and automation
+* Android and desktop applications
+* Cloud infrastructure and web technologies
+* Exploring local and open-source AI models
 
-## Languages and Tools
+Currently building and maintaining projects under the **SeedCode** ecosystem.
+
+**Education:** Diploma in Engineering — Computer Science & Technology
+**Institution:** Dhaka Polytechnic Institute
+**Current Semester:** 3rd Semester
+
+---
+
+## Tech Stack
 
 <table>
-<tr><td><b>Frontend</b></td><td>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="32" height="32" alt="HTML5"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="32" height="32" alt="CSS3"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="32" height="32" alt="JavaScript"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="32" height="32" alt="TypeScript"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="32" height="32" alt="React"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="32" height="32" alt="Next.js" style="background:white;border-radius:4px;"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="32" height="32" alt="Tailwind CSS"/>
-</td></tr>
-<tr><td><b>Backend</b></td><td>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="32" height="32" alt="Node.js"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="32" height="32" alt="Python"/>
-</td></tr>
-<tr><td><b>Database</b></td><td>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" width="32" height="32" alt="Supabase"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="32" height="32" alt="Oracle"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="32" height="32" alt="MongoDB"/>
-<img src="https://cdn.simpleicons.org/cloudflare" width="32" height="32" alt="Cloudflare R2"/>
-<img src="https://img.shields.io/badge/IndexedDB-000000?style=flat-square" height="28" alt="IndexedDB"/>
-</td></tr>
-<tr><td><b>DevOps</b></td><td>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" width="32" height="32" alt="Vercel" style="background:white;border-radius:4px;"/>
-<img src="https://cdn.simpleicons.org/netlify" width="32" height="32" alt="Netlify"/>
-<img src="https://cdn.simpleicons.org/githubpages" width="32" height="32" alt="GitHub Pages" style="background:white;border-radius:4px;"/>
-<img src="https://cdn.simpleicons.org/cloudflare" width="32" height="32" alt="Cloudflare"/>
-</td></tr>
-<tr><td><b>Version Control</b></td><td>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="32" height="32" alt="Git"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" height="32" alt="GitHub" style="background:white;border-radius:4px;"/>
-</td></tr>
-<tr><td><b>Operating Systems</b></td><td>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" width="32" height="32" alt="Windows"/>
-<img src="https://cdn.simpleicons.org/linuxmint" width="32" height="32" alt="Linux Mint"/>
-<img src="https://cdn.simpleicons.org/parrotsecurity" width="32" height="32" alt="Parrot OS"/>
-<img src="https://cdn.simpleicons.org/tails" width="32" height="32" alt="Tails" style="background:white;border-radius:4px;"/>
-<img src="https://cdn.simpleicons.org/kalilinux" width="32" height="32" alt="Kali Linux" style="background:white;border-radius:4px;"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg" width="32" height="32" alt="Arch Linux"/>
-</td></tr>
-<tr><td><b>AI</b></td><td>
-<img src="https://cdn.simpleicons.org/claude" width="32" height="32" alt="Claude Code"/>
-<img src="https://img.shields.io/badge/OpenCode-000000?style=flat-square" height="28" alt="OpenCode"/>
-<img src="https://img.shields.io/badge/Seed_Code_CLI-000000?style=flat-square" height="28" alt="Seed Code CLI"/>
-<img src="https://img.shields.io/badge/OpenRouter-6E56CF?style=flat-square" height="28" alt="OpenRouter"/>
-<img src="https://cdn.simpleicons.org/ollama" width="32" height="32" alt="Ollama" style="background:white;border-radius:4px;"/>
-<tr><td><b>Other Tools</b></td><td>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" width="32" height="32" alt="Qt / PySide6"/>
-<img src="https://img.shields.io/badge/Pygame-000000?style=flat-square&logo=python&logoColor=white" height="28" alt="Pygame"/>
+<tr>
+<td width="150"><b>Frontend</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind" />
+</td>
+</tr>
 
-<!-- Figma -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="32" height="32" alt="Figma"/>
+<tr>
+<td><b>Backend</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=nodejs,python" />
+</td>
+</tr>
 
-<!-- Canva -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" width="32" height="32" alt="Canva"/>
+<tr>
+<td><b>Database & Storage</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=supabase,mongodb,oracle,cloudflare" />
+</td>
+</tr>
 
-<!-- Adobe Photoshop -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" width="32" height="32" alt="Adobe Photoshop"/>
+<tr>
+<td><b>AI & LLM</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=ollama" />
+<img src="https://img.shields.io/badge/OpenRouter-6E56CF?style=flat-square"/>
+<img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat-square"/>
+<img src="https://img.shields.io/badge/OpenCode-000000?style=flat-square"/>
+<img src="https://img.shields.io/badge/SeedCode_CLI-000000?style=flat-square"/>
+</td>
+</tr>
 
-<!-- Adobe Illustrator -->
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" width="32" height="32" alt="Adobe Illustrator"/>
+<tr>
+<td><b>Desktop Development</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=qt,py" />
+<img src="https://img.shields.io/badge/PySide6-41CD52?style=flat-square"/>
+<img src="https://img.shields.io/badge/Pygame-000000?style=flat-square"/>
+</td>
+</tr>
 
-</td></tr>
+<tr>
+<td><b>DevOps & Hosting</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=vercel,netlify,cloudflare,github" />
+</td>
+</tr>
+
+<tr>
+<td><b>Development Tools</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,figma,linux" />
+</td>
+</tr>
+
+<tr>
+<td><b>Operating Systems</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=windows,linux,arch" />
+</td>
+</tr>
+
+<tr>
+<td><b>Design</b></td>
+<td>
+<img src="https://skillicons.dev/icons?i=figma,ps,ai,canva" />
+</td>
+</tr>
 </table>
 
-<br/>
+---
 
-## Featured Project
+## Featured Projects
 
-<img src="https://raw.githubusercontent.com/Alshahriar-07/seedcode-cli/refs/heads/main/assets/windows/seedcode.ico" height="28" alt="Seed Code CLI"/>  Seed Code Chat
+### 1. SeedCode CLI
 
-AI-powered chat application with multi-provider support, streaming responses, markdown rendering, code syntax highlighting, and chat history — available as web and Android versions.
+**Your AI coding agent, built for the terminal.**
 
-**Stack:** Next.js · TypeScript · Tailwind CSS · Node.js
+An AI-powered terminal coding agent designed to help developers work directly with their codebases. It supports project understanding, file operations, code generation, terminal commands, and AI-powered development workflows.
 
-🔗 **Live:** [seedcode-chat.vercel.app](https://seedcode-chat.vercel.app/)
-🐙 **GitHub:** [Alshahriar-07](https://github.com/Alshahriar-07)
+* Python-based CLI application
+* Multiple AI providers and model integrations
+* OpenRouter and local model support
+* Project-aware coding workflows
+* File reading, editing, creation, and deletion
+* Terminal command execution
+* Interactive terminal interface
 
-<br/>
+**Stack:** Python · AI APIs · OpenRouter · Ollama
 
-## Projects
+**Links:** [GitHub Repository](https://github.com/Alshahriar-07/seedcode-cli) · [Website](https://seedcode-cli.vercel.app/)
+
+### 2. SeedCode VS Code Extension
+
+An AI coding assistant extension that brings SeedCode development workflows directly into Visual Studio Code.
+
+**Stack:** VS Code API · TypeScript · AI Integration
+
+### 3. SeedCode Chat
+
+An AI-powered chat application with multiple AI providers, streaming responses, Markdown rendering, syntax-highlighted code blocks, and chat history.
+
+**Stack:** Next.js · TypeScript · Tailwind CSS
+
+**Links:** [Live Application](https://seedcode-chat.vercel.app/) · [GitHub](https://github.com/Alshahriar-07)
+
+### 4. SeedCode Chat Android
+
+The Android-focused version of SeedCode Chat, bringing AI conversations to mobile devices.
+
+**Stack:** Android · SeedCode Ecosystem
+
+**Link:** [Website](https://seedcode-app.vercel.app/)
+
+---
+
+## Other Projects
 
 <details open>
-<summary><b>🤖 AI / Tools</b></summary>
+<summary><b>Web Applications & Developer Tools</b></summary>
 <br/>
 
-**Seed Code Chat** — AI-powered chat app with multiple AI providers, streaming responses, markdown rendering, and code syntax highlighting.
-Stack: Next.js, TypeScript, Tailwind CSS
-🔗 [Live](https://seedcode-chat.vercel.app/)
+**Droply Files**
 
-**Seed Code CLI** — Terminal-based AI coding tool using model APIs through providers like OpenRouter (`seedcode` command).
-Stack: Node.js, OpenRouter
-🔗 [Live](https://seedcode-web.vercel.app/)
+A browser-based peer-to-peer file transfer platform. Transfer files between devices using QR codes or short connection codes without relying on traditional file-upload servers.
 
-**Seed Code Chat (Android)** — Mobile version of Seed Code Chat.
-🔗 [Live](https://seedcode-app.vercel.app/)
+Stack: JavaScript · Cloudflare Workers · Durable Objects · WebRTC
+
+[Live Website](https://droply-files.vercel.app/) · [GitHub](https://github.com/Alshahriar-07/Droply)
+
+---
+
+**INTLLM**
+
+An experimental AI/LLM-related web project.
+
+[Live Website](https://intllm.vercel.app/)
+
+---
+
+**Seed Mail**
+
+A web-based email-related project within the Seed ecosystem.
+
+[Live Website](https://mrseedmail.vercel.app/)
+
+---
+
+**Dorkey**
+
+An experimental web project.
+
+[Live Website](https://dorkey.vercel.app/)
+
+---
+
+**Mr Mesoff**
+
+A web development project.
+
+[Live Website](https://mrmesoff.vercel.app/)
 
 </details>
 
 <details>
-<summary><b>☁️ Cloud / Infrastructure</b></summary>
+<summary><b>Desktop & Experimental Projects</b></summary>
 <br/>
 
-**Seed Cloud** — Universal cloud-storage router aggregating multiple providers (Google Drive, OneDrive, Dropbox, pCloud, Box, Koofr, MEGA, MediaFire, Proton Drive) with Supabase handling auth and metadata.
-Stack: Supabase
-🔗 [Live](https://seedcloud.vercel.app/)
+**Hmouse**
+
+A computer vision-based Windows cursor controller that allows users to control their mouse using hand gestures through a webcam.
+
+Stack: Python · OpenCV · Computer Vision
+
+[GitHub Repository](https://github.com/Alshahriar-07/Hmouse)
+
+---
+
+**Bean Run**
+
+A game developed using Python and Pygame.
+
+[Play Online](https://mrbeanrun.vercel.app/)
+
+---
+
+**CraftingTable**
+
+A Minecraft-inspired web experiment featuring Minecraft-style characters and crafting-inspired visual elements.
 
 </details>
 
-<details>
-<summary><b>🖥️ Desktop</b></summary>
-<br/>
+---
 
-**SeedBot** — Desktop AI assistant with multi-provider AI gateways, streaming responses, local chat history, and markdown rendering.
-Stack: Python, PySide6
+## AI & Development Interests
 
-</details>
+I'm particularly interested in exploring how AI can improve software development.
 
-<details>
-<summary><b>🎮 Games</b></summary>
-<br/>
+Some areas I'm actively interested in:
 
-**Bean Run** — A game built with Python and Pygame.
-🔗 [Live](https://mrbeanrun.vercel.app/)
+* AI coding agents and autonomous development workflows
+* LLM tool calling and function execution
+* Local AI inference with Ollama
+* Open-source language models
+* Multi-provider AI architecture
+* Context management and codebase understanding
+* AI-assisted software engineering
 
-</details>
+---
 
-<details>
-<summary><b>🧪 Experiments</b></summary>
-<br/>
-
-**Hmouse** — Control your Windows cursor using only your hand and a webcam, no physical mouse required.
-🐙 [GitHub](https://github.com/Alshahriar-07/Hmouse)
-
-**CraftingTable** — A Minecraft-inspired web project featuring paper/craft-style Minecraft characters and assets.
-🐙 _(repo link not provided)_
-
-**EAGOX Tools** — A developer tooling ecosystem and branding concept.
-🐙 _(repo link not provided)_
-
-</details>
-
-<br/>
-
-## Contact
-
-<a href="mailto:alshahriarsayon425@gmail.com"><img src="https://img.shields.io/badge/📧_Email-D14836?style=for-the-badge&logoColor=white" alt="Email"/></a>
-<a href="https://github.com/Alshahriar-07"><img src="https://img.shields.io/badge/🐙_GitHub-181717?style=for-the-badge&logoColor=white" alt="GitHub"/></a>
-<a href="https://alshahriarsayon.vercel.app/"><img src="https://img.shields.io/badge/🌐_Portfolio-000000?style=for-the-badge&logoColor=white" alt="Portfolio"/></a>
-<a href="https://www.linkedin.com/in/alshahriarsowan"><img src="https://img.shields.io/badge/💼_LinkedIn-0A66C2?style=for-the-badge&logoColor=white" alt="LinkedIn"/></a>
-
-<br/>
-
-
-<!-- ==================== GITHUB STATS ==================== -->
+## GitHub Statistics
 
 <div align="center">
 
-<h2>📊 GitHub Stats</h2>
-
-<img
-  src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Alshahriar-07&theme=github_dark"
-  alt="GitHub Stats"
-/>
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Alshahriar-07&theme=github_dark"/>
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Alshahriar-07&theme=github_dark"/>
 
 </div>
 
-<br>
-
-<!-- ==================== TOP LANGUAGES ==================== -->
+<br/>
 
 <div align="center">
 
-<h2>💻 Top Languages</h2>
-
-<img
-  src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Alshahriar-07&theme=github_dark"
-  alt="Top Languages"
-/>
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Alshahriar-07&theme=github-compact&hide_border=true&area=true"/>
 
 </div>
 
-<br>
+---
 
-<!-- ==================== CONTRIBUTION GRAPH ==================== -->
+## Connect With Me
+
+I'm always interested in connecting with developers, exploring new technologies, and collaborating on interesting software projects.
+
+<a href="https://github.com/Alshahriar-07"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://alshahriarsayon.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a> <a href="https://www.linkedin.com/in/alshahriarsowan"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a> <a href="mailto:alshahriarsayon425@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+
+<br/>
 
 <div align="center">
 
-<h2>📈 Contribution Graph</h2>
-
-<img
-  src="https://github-readme-activity-graph.vercel.app/graph?username=Alshahriar-07&theme=github-compact&hide_border=true&area=true"
-  width="100%"
-  alt="GitHub Contribution Graph"
-/>
+**Building useful things, one project at a time.**
 
 </div>
-
