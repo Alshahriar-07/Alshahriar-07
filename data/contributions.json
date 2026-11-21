@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "username": "Alshahriar-07",
-  "generated_at": "2026-11-21T13:59:15Z",
-  "source": "github-html",
-  "source_label": "GitHub public contribution calendar",
+  "generated_at": "2026-11-21T15:26:21Z",
+  "source": "github-graphql",
+  "source_label": "GitHub GraphQL API",
   "sample": false,
   "range": {
-    "from": "2025-11-16",
+    "from": "2025-11-22",
     "to": "2026-11-21"
   },
-  "total_contributions": 689,
-  "active_days": 235,
-  "tracked_days": 371,
-  "avg_per_active_day": 2.93,
+  "total_contributions": 684,
+  "active_days": 231,
+  "tracked_days": 365,
+  "avg_per_active_day": 2.96,
   "current_streak": 3,
   "longest_streak": 28,
   "longest_streak_range": {
@@ -27,7 +27,7 @@
   "current_month": {
     "month": "2026-11",
     "label": "NOV",
-    "total": 60,
+    "total": 63,
     "active_days": 15,
     "best_day": {
       "date": "2026-11-05",
@@ -38,14 +38,14 @@
     "trend_previous_total": 64,
     "trend_basis": "OCT 1-21",
     "partial": true,
-    "trend_pct": -6
+    "trend_pct": -2
   },
   "monthly": [
     {
       "month": "2025-11",
       "label": "NOV",
-      "total": 25,
-      "active_days": 12,
+      "total": 17,
+      "active_days": 8,
       "days_in_month": 30,
       "best_day": {
         "date": "2025-11-27",
@@ -176,7 +176,7 @@
     {
       "month": "2026-11",
       "label": "NOV",
-      "total": 60,
+      "total": 63,
       "active_days": 15,
       "days_in_month": 30,
       "best_day": {
@@ -186,36 +186,6 @@
     }
   ],
   "days": [
-    {
-      "date": "2025-11-16",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-17",
-      "count": 1,
-      "level": 1
-    },
-    {
-      "date": "2025-11-18",
-      "count": 1,
-      "level": 1
-    },
-    {
-      "date": "2025-11-19",
-      "count": 3,
-      "level": 2
-    },
-    {
-      "date": "2025-11-20",
-      "count": 3,
-      "level": 2
-    },
-    {
-      "date": "2025-11-21",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-11-22",
       "count": 1,
@@ -2038,8 +2008,8 @@
     },
     {
       "date": "2026-11-21",
-      "count": 5,
-      "level": 2
+      "count": 8,
+      "level": 3
     }
   ]
 }
