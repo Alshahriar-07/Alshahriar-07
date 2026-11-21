@@ -11,6 +11,8 @@ on:
       - "scripts/**"
       - "generate_cards.py"
       - "assets/me.png"
+      - "assets/portrait.webp"
+      - "data/**"
       - "fonts/**"
       - "requirements.txt"
       - ".github/workflows/refresh-profile.yml"

@@ -173,9 +173,9 @@ EXPERIENCE = [
     },
     {
         "role": "Freelance Developer",
-        "org": "Two client projects delivered",
+        "org": "Direct client work",
         "meta": "DELIVERED",
-        "place": "Direct client work",
+        "place": "2 projects delivered",
         "bullets": [
             "Photographer portfolio with a booking and enquiry form (HTML, CSS, JavaScript).",
             "English-learning app with real-time AI voice conversation, built with Python, FastAPI, JavaScript and an OpenAI-compatible API.",

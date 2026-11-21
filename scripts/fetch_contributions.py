@@ -140,6 +140,7 @@ def fetch_html(user: str) -> list[dict]:
             tooltips[target] = tip.get_text(" ", strip=True)
 
     days = []
+    unparsed = 0
     for cell in cells:
         iso = cell.get("data-date")
         if not iso:
@@ -151,14 +152,21 @@ def fetch_html(user: str) -> list[dict]:
             match = re.search(r"([\d,]+)\s+contributions?", text, re.I)
             if not match:
                 # A non-zero level with an unparseable tooltip must not be
-                # silently recorded as zero; skip it and let the gap check speak.
+                # silently recorded as zero. Count it, then fail rather than
+                # publish an undercount.
                 if cell.get("data-level") not in (None, "0"):
+                    unparsed += 1
                     continue
                 count = 0
             else:
                 count = int(match.group(1).replace(",", ""))
         days.append({"date": iso, "count": count})
-    return _clean_days(days)
+    if unparsed > 5:
+        raise RuntimeError(f"{unparsed} contribution cells had no parseable count")
+    cleaned = _clean_days(days)
+    if sum(day["count"] for day in cleaned) == 0:
+        raise RuntimeError("calendar contains no contribution counts")
+    return cleaned
 
 
 def _clean_days(days: list[dict]) -> list[dict]:
@@ -418,6 +426,14 @@ def main(argv=None) -> int:
     if previous and previous.get("total_contributions", 0) > 0 and stats["total_contributions"] == 0:
         print("refusing to replace non-zero data with an empty calendar", file=sys.stderr)
         return 1
+
+    # A refresh that only changes generated_at is not worth a commit.
+    if previous:
+        old = {key: value for key, value in previous.items() if key != "generated_at"}
+        new = {key: value for key, value in stats.items() if key != "generated_at"}
+        if old == new:
+            print("contribution data unchanged; nothing written")
+            return 0
 
     _atomic_json(args.out, stats)
     if not args.quiet:

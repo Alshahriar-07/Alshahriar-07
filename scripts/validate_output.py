@@ -140,6 +140,15 @@ def validate_svg(path: str, glyphs, static, errors, warnings):
         errors.append(f"{rel}: glyph {code} '{ch}' missing from {fam}")
 
     style = " ".join(t.text or "" for t in root.iter(f"{NS}style"))
+    declared = set(re.findall(r"font-family:'([^']+)'", style))
+    used = set()
+    for elem in root.iter():
+        if _local(elem.tag) == "text":
+            fam = elem.get("font-family")
+            if fam:
+                used.add(_first_family(fam))
+    for fam in sorted(used - declared):
+        errors.append(f"{rel}: uses {fam} but does not embed that face")
     if not style:
         errors.append(f"{rel}: no embedded <style>")
     else:

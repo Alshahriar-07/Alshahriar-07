@@ -145,7 +145,7 @@ def render_hero(data, portrait_b64):
 
     left = [
         kicker(PAD, 46, "EAGOX STUDIO / INDEPENDENT SOFTWARE", delay=0.05),
-        f'<text class="f"{d(0.10)} x="{RIGHT - 276}" y="46" {ff("mono", 8.5, MUTED)} letter-spacing="1.1" text-anchor="end">GAZIPUR, BD / UTC+6</text>',
+        f'<text class="f"{d(0.10)} x="{RIGHT}" y="46" {ff("mono", 8.5, MUTED)} letter-spacing="1.1" text-anchor="end">GAZIPUR, BD / UTC+6</text>',
         f'<text class="r"{d(0.16)} x="{PAD}" y="140" {ff("serif", 96, INK)} letter-spacing="-1.6">Al Shahriar</text>',
         f'<text class="r"{d(0.28)} x="{PAD}" y="220" {ff("serif", 96, ACCENT)} font-style="italic" letter-spacing="-1.2">Sowan</text>',
         f'<text class="r"{d(0.42)} x="{PAD}" y="254" {ff("sans", 16.5, SOFT)}>Jr. Software &amp; AI Integration Developer</text>',
@@ -167,7 +167,7 @@ def render_hero(data, portrait_b64):
     body = "".join(left + frame)
     label = (f'{C.IDENTITY["name"]} - {C.IDENTITY["title"]}. Founder of EAGOX Studio. '
              "Portrait, location and headline product counts.")
-    return svg_doc(W, H, body, label, fonts=ALL_FONTS, pad_bottom=14)
+    return svg_doc(W, H, body, label, fonts=("serif", "serif-i", "sans", "mono"), pad_bottom=14)
 
 
 # ---- profile tiles ---------------------------------------------------------
@@ -237,7 +237,7 @@ def render_about(data):
     label = ("About Al Shahriar Sowan - independent developer at EAGOX Studio. "
              "Builds web, desktop, Android and CLI products and integrates AI into them.")
     body = head_html + "".join(panel + rail)
-    return svg_doc(W, H, body, label, fonts=ALL_FONTS)
+    return svg_doc(W, H, body, label, fonts=("serif", "serif-i", "sans", "mono"))
 
 
 # ---- monthly activity ------------------------------------------------------
@@ -253,6 +253,15 @@ def render_activity(data):
     trend = cm.get("trend_pct")
     trend_note = "NO PRIOR DATA" if trend is None else f"{trend:+d}% VS {cm.get('trend_basis') or 'PREVIOUS MONTH'}"
     partial = " (TO DATE)" if cm.get("partial") else ""
+    first_partial = date.fromisoformat(data["range"]["from"]).day != 1
+    if first_partial and cm.get("partial"):
+        partial_note = "THE FIRST AND CURRENT MONTHS ARE PARTIAL"
+    elif first_partial:
+        partial_note = "THE FIRST MONTH IS PARTIAL"
+    elif cm.get("partial"):
+        partial_note = "THE CURRENT MONTH IS PARTIAL"
+    else:
+        partial_note = ""
 
     head_html = head("02", "ACTIVITY", "The year in ", "commits", data=data,
                      right=f'{months[0]["label"]} {months[0]["month"][:4]} - {months[-1]["label"]} {months[-1]["month"][:4]}')
@@ -279,6 +288,8 @@ def render_activity(data):
     chart = [
         f'<text class="f" x="{x1}" y="124" {ff("mono", 8.0, SOFT)} text-anchor="end">PEAK {peak["total"]} · {peak["label"]} {peak["month"][:4]}</text>',
     ]
+    if partial_note:
+        chart.append(f'<text class="f" x="{x0}" y="302" {ff("mono", 7.2, MUTED)} letter-spacing=".4">{partial_note}</text>')
     for level in (0.25, 0.5, 0.75):
         gy = base_y - 116 * level
         chart.append(f'<line x1="{x0}" y1="{gy:.1f}" x2="{x1}" y2="{gy:.1f}" stroke="{RULE}" stroke-opacity=".55" stroke-dasharray="2 5"/>')
@@ -325,7 +336,7 @@ def render_activity(data):
     label = (f'{num(total)} GitHub contributions in the last year, {data["active_days"]} active days, '
              f'{data["current_streak"]}-day current streak, {data["longest_streak"]}-day longest streak.')
     body = head_html + "".join(left + chart + footer)
-    return svg_doc(W, H, body, label, fonts=ALL_FONTS)
+    return svg_doc(W, H, body, label, fonts=("serif", "serif-i", "sans", "mono"))
 
 
 # ---- contribution heatmap --------------------------------------------------
@@ -395,7 +406,7 @@ def render_heatmap(data):
     label = (f'Contribution heatmap, {data["range"]["from"]} to {data["range"]["to"]}: '
              f'{num(data["total_contributions"])} contributions across {data["active_days"]} active days.')
     body = head_html + "".join(grid + legend + footer)
-    return svg_doc(W, H, body, label, fonts=ALL_FONTS)
+    return svg_doc(W, H, body, label, fonts=("serif", "serif-i", "mono"))
 
 
 # ---- work title + projects -------------------------------------------------
