@@ -1,0 +1,14 @@
+# Workspace-only inputs: the profile repo should not publish these.
+Reference Repo/
+old repo of mine/
+instraction.txt
+assets/Al_Shahriar_Sowan_Resume^.pdf
+.contrib-preview.html
+
+# Local tooling and test output
+.venv/
+build/
+__pycache__/
+*.pyc
+data/sample-contributions.json
+*.tmp

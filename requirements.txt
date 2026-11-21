@@ -1,0 +1,4 @@
+beautifulsoup4>=4.12,<5
+fonttools>=4.50,<5
+Pillow>=10,<14
+requests>=2.31,<3
