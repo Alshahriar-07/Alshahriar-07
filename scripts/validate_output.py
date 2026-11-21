@@ -33,8 +33,9 @@ from svg_kit import FONT_SPECS  # noqa: E402
 
 NS = "{http://www.w3.org/2000/svg}"
 REQUIRED = [
-    "hero.svg", "portfolio.svg", "github.svg", "linkedin.svg", "about.svg",
+    "hero.svg", "portfolio.svg", "linkedin.svg", "instagram.svg", "about.svg",
     "monthly-activity.svg", "contribution-graph.svg", "title-work.svg",
+    "rail-products.svg", "rail-experiments.svg",
     "projects/seed-code-chat.svg", "projects/seed-code-mail.svg", "projects/mr-mesoff.svg",
     "projects/seedcode-cli.svg", "projects/intllm.svg", "projects/dorkey.svg",
     "skills.svg", "experience.svg", "education.svg",
@@ -46,7 +47,7 @@ FAMILY_KEYS = {
 }
 PROJECT_URLS = [
     "https://seedcode-chat.vercel.app", "https://mrseedmail.vercel.app", "https://mrmesoff.vercel.app",
-    "https://seedcode-cli.vercel.app", "https://intllm.vercel.app", "https://dorkey.vercel.app",
+    "https://seedcode-cli.vercel.app/", "https://intllm.vercel.app", "https://dorkey.vercel.app",
     "https://github.com/Alshahriar-07/seedcode-cli",
 ]
 
@@ -185,8 +186,33 @@ def validate_readme(path: str, cards_dir: str, errors):
             errors.append(f"README: missing project link {url}")
     if "<script" in text:
         errors.append("README: contains a script tag")
-    if "width=\"32.5%\"" not in text:
+    featured = "./cards/projects/seedcode-cli.svg"
+    if featured not in text:
+        errors.append("README: missing the SeedCode CLI flagship card")
+    else:
+        featured_at = text.find(featured)
+        for slug in ("seed-code-chat", "seed-code-mail", "mr-mesoff", "intllm", "dorkey"):
+            other_at = text.find(f"./cards/projects/{slug}.svg")
+            if other_at != -1 and other_at < featured_at:
+                errors.append(f"README: {slug} appears before the SeedCode CLI flagship")
+    if text.count('width="32.5%"') < 3:
         errors.append("README: the three profile tiles are not at 32.5% width")
+    instagram = "https://www.instagram.com/iam.alshahriar/"
+    if instagram not in text:
+        errors.append("README: missing the Instagram profile link")
+    ascii_asset = os.path.join(readme_dir, "assets", "me_ascii.svg")
+    if not os.path.exists(ascii_asset):
+        errors.append("README: missing ASCII portrait asset assets/me_ascii.svg")
+    else:
+        asset = open(ascii_asset, encoding="utf-8").read()
+        if "<image" in asset or "data:image" in asset:
+            errors.append("assets/me_ascii.svg: contains a raster image instead of text")
+        if asset.count("textLength=") < 80:
+            errors.append("assets/me_ascii.svg: too few character rows")
+        if any(tag in asset for tag in ("<rect", "<line", "<path", "<circle", "<polygon", "<ellipse")):
+            errors.append("assets/me_ascii.svg: contains a non-character shape/background")
+        if 'style="background:transparent"' not in asset:
+            errors.append("assets/me_ascii.svg: missing explicit transparent background")
 
 
 def validate_data(data, errors, warnings):
@@ -222,6 +248,15 @@ def validate_dir(cards_dir, data, readme=None, static=None, quiet=False):
             errors.append(f"missing required card {rel}")
             continue
         validate_svg(path, glyphs, bool(static), errors, warnings)
+    # The flagship must be visibly larger than the regular 430 x 194 project cards.
+    featured_path = os.path.join(cards_dir, "projects", "seedcode-cli.svg")
+    if os.path.exists(featured_path):
+        try:
+            root = ET.parse(featured_path).getroot()
+            if float(root.get("width", "0")) < 880 or float(root.get("height", "0")) < 400:
+                errors.append("projects/seedcode-cli.svg: flagship showcase is not full-width")
+        except (ET.ParseError, ValueError):
+            pass
     # Any extra SVG in cards/ is validated too.
     for base, _, files in os.walk(cards_dir):
         for name in files:

@@ -25,6 +25,8 @@ IDENTITY = {
     "portfolio_label": "alshahriarsayon.vercel.app",
     "linkedin": "https://www.linkedin.com/in/alshahriarsowan",
     "linkedin_label": "in/alshahriarsowan",
+    "instagram": "https://www.instagram.com/iam.alshahriar/",
+    "instagram_label": "@iam.alshahriar",
     "email": "alshahriarsayon425@gmail.com",
     "profile_repo": "Alshahriar-07/Alshahriar-07",
 }
@@ -40,28 +42,28 @@ TILES = [
         "blurb": "Selected work and products.",
     },
     {
-        "slug": "github",
-        "index": "02",
-        "label": "GitHub",
-        "url": IDENTITY["github"],
-        "display": "github.com/Alshahriar-07",
-        "blurb": "Source, commits and experiments.",
-    },
-    {
         "slug": "linkedin",
-        "index": "03",
+        "index": "02",
         "label": "LinkedIn",
         "url": IDENTITY["linkedin"],
         "display": IDENTITY["linkedin_label"],
         "blurb": "Experience, education and contact.",
     },
+    {
+        "slug": "instagram",
+        "index": "03",
+        "label": "Instagram",
+        "url": IDENTITY["instagram"],
+        "display": IDENTITY["instagram_label"],
+        "blurb": "Follow along on Instagram.",
+    },
 ]
 
-# Headline numbers used in the hero and about card. All are countable facts.
+# Headline facts used in the hero. The flagship comes first.
 FACTS = [
+    ("v10.4.0", "SEEDCODE CLI · FLAGSHIP"),
     ("06", "PRODUCTS SHIPPED"),
-    ("04", "PLATFORMS"),
-    ("02", "CLIENT PROJECTS"),
+    ("04", "PRODUCT PLATFORMS"),
 ]
 
 ABOUT_TERMINAL = [
@@ -90,8 +92,34 @@ ABOUT_RAIL = [
 # repository link that was provided.
 PROJECTS = [
     {
-        "slug": "seed-code-chat",
+        "slug": "seedcode-cli",
         "index": "01",
+        "name": "SeedCode CLI",
+        "version": "v10.4.0",
+        "flagship": True,
+        "desc": "A workspace-aware AI coding agent for the terminal. It reads the project, edits real files, runs commands and verifies the result before reporting a task done.",
+        "category": "FLAGSHIP · AI CODING AGENT",
+        "tags": "LOCAL + CLOUD MODELS · 27 AGENT TOOLS",
+        "live": "https://seedcode-cli.vercel.app/",
+        "repo": "https://github.com/Alshahriar-07/seedcode-cli",
+        "features": [
+            ("READS THE WORKSPACE", "Indexes only the context a task needs."),
+            ("EDITS REAL FILES", "Bounded diffs with real operation results."),
+            ("RUNS + VERIFIES", "Tests, exit codes and evidence before done."),
+            ("LOCAL + CLOUD", "Ollama, OpenRouter and OpenAI-compatible models."),
+        ],
+        "platforms": "WINDOWS 10/11 · LINUX · MACOS",
+        "tech": "PYTHON 3.10+ · GIT · OLLAMA · OPENROUTER",
+        "stats": [
+            ("v10.4.0", "CURRENT RELEASE"),
+            ("03", "SUPPORTED OS"),
+            ("27", "AGENT TOOLS"),
+            ("LOCAL + CLOUD", "MODEL ROUTING"),
+        ],
+    },
+    {
+        "slug": "seed-code-chat",
+        "index": "02",
         "name": "Seed Code Chat",
         "desc": "A web and Android AI assistant that works with multiple AI providers.",
         "category": "WEB + ANDROID",
@@ -101,7 +129,7 @@ PROJECTS = [
     },
     {
         "slug": "seed-code-mail",
-        "index": "02",
+        "index": "03",
         "name": "Seed Code Mail",
         "desc": "A Gmail API email workspace with campaigns, sending history, Supabase Auth and row-level security.",
         "category": "WEB",
@@ -111,23 +139,13 @@ PROJECTS = [
     },
     {
         "slug": "mr-mesoff",
-        "index": "03",
+        "index": "04",
         "name": "MR MESOFF",
         "desc": "One desktop inbox for WhatsApp Business, Instagram Professional and Messenger, with AI-assisted replies.",
         "category": "DESKTOP",
         "tags": "WHATSAPP · INSTAGRAM · MESSENGER",
         "live": "https://mrmesoff.vercel.app",
         "repo": "",
-    },
-    {
-        "slug": "seedcode-cli",
-        "index": "04",
-        "name": "SeedCode CLI v10.2.1",
-        "desc": "An AI command-line development assistant with local and cloud models, plus tool calling.",
-        "category": "CLI",
-        "tags": "LOCAL + CLOUD MODELS · TOOL CALLING",
-        "live": "https://seedcode-cli.vercel.app",
-        "repo": "https://github.com/Alshahriar-07/seedcode-cli",
     },
     {
         "slug": "intllm",
@@ -144,7 +162,7 @@ PROJECTS = [
         "index": "06",
         "name": "Dorkey",
         "desc": "A typing speed test with WPM, CPM, accuracy, errors, timed sessions and ranking.",
-        "category": "WEB TOOL",
+        "category": "EXPERIMENT · WEB TOOL",
         "tags": "WPM · CPM · ACCURACY · RANKING",
         "live": "https://dorkey.vercel.app",
         "repo": "",

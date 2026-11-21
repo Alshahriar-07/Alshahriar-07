@@ -51,12 +51,12 @@ jobs:
 
       - name: Commit only when something changed
         run: |
-          if [ -z "$(git status --porcelain -- data cards README.md)" ]; then
+          if [ -z "$(git status --porcelain -- data cards README.md assets/me_ascii.svg)" ]; then
             echo "No changes to publish."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data cards README.md
+          git add data cards README.md assets/me_ascii.svg
           git commit -m "chore(profile): refresh contribution cards [skip ci]"
           git push

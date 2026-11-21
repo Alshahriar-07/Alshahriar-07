@@ -13,7 +13,6 @@ if the feed is unavailable the fetch script keeps the previous data.
 from __future__ import annotations
 
 import argparse
-import base64
 import json
 import os
 import re
@@ -24,8 +23,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "scripts"))
 
 import content as C  # noqa: E402
+import make_ascii_svg as A  # noqa: E402
 import svg_kit as K  # noqa: E402
-import prep_portrait  # noqa: E402
 from svg_kit import (  # noqa: E402
     ACCENT, BG, BLACK, CARD, CARD_HI, FAINT, INK, MUTED, RULE, RULE_HI, SOFT,
     arrow, body_text, count_up, d, esc, ff, heading, kicker, measure, rule,
@@ -35,6 +34,11 @@ from svg_kit import (  # noqa: E402
 W = 880
 PAD = 44
 RIGHT = W - PAD
+ASCII_CSS = (
+    ".aw{animation:asciiIn 1.25s cubic-bezier(.2,.8,.2,1) both}"
+    "@keyframes asciiIn{0%{opacity:.25;clip-path:inset(0 0 100% 0)}25%{opacity:1}100%{opacity:1;clip-path:inset(0 0 0 0)}}"
+    "@media (prefers-reduced-motion:reduce){.aw{opacity:1!important;clip-path:none!important;animation:none!important}}"
+)
 HEAT = ("#19191c", "#2c2c31", "#45454b", "#65656c", "#93939a", "#d5d2cb")
 MONTHS = ("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC")
 
@@ -114,34 +118,23 @@ def stat_cell(x, y, value, label, detail="", delay=0.0, value_size=25):
 
 
 # ---- hero ------------------------------------------------------------------
-def render_hero(data, portrait_b64):
+def render_hero(data, ascii_rows):
     H = 430
-    # portrait frame
-    frame = [
-        '<rect x="604" y="76" width="232" height="290" rx="10" fill="#0c0c0e" stroke="' + RULE_HI + '"/>',
-        '<clipPath id="pc"><rect x="612" y="84" width="216" height="274" rx="4">',
-    ]
-    if K.MOTION:
-        frame.append('<animate attributeName="height" from="0" to="274" begin="0.45s" dur="0.9s" fill="freeze"/>')
-    frame.append('</rect></clipPath>')
-    frame.append(
-        f'<image class="f"{d(0.55)} x="612" y="84" width="216" height="274" clip-path="url(#pc)" '
-        f'preserveAspectRatio="xMidYMid slice" href="data:image/webp;base64,{portrait_b64}"/>'
-    )
-    frame.append('<rect x="611.5" y="83.5" width="217" height="275" rx="4" fill="none" stroke="' + INK + '" stroke-opacity=".12"/>')
-    ticks = [
-        ("M596 76 H604 M604 68 V76", 0.62),
-        ("M836 76 H844 M836 68 V76", 0.68),
-        ("M596 366 H604 M604 366 V374", 0.74),
-        ("M836 366 H844 M836 374 V366", 0.80),
-    ]
-    for path, begin in ticks:
-        frame.append(
-            f'<path class="dr" style="animation-delay:{begin}s" d="{path}" pathLength="1" '
-            f'stroke="{ACCENT}" stroke-opacity=".55" stroke-width="1.2" fill="none"/>'
+
+    # The portrait is the same 180 x 96 character grid as assets/me_ascii.svg,
+    # rendered as light ink directly on the card. No panel, frame, border or
+    # label is drawn around it; the character gaps show the existing surface.
+    cell_h = 322 / len(ascii_rows)
+    art = ['<g class="aw" style="animation-delay:0.52s">']
+    for i, line in enumerate(ascii_rows):
+        baseline = 66 + i * cell_h + cell_h * 0.72
+        art.append(
+            f'<text xml:space="preserve" x="506" y="{baseline:.2f}" '
+            f'{ff("mono", round(cell_h * 0.86, 2), INK)} fill-opacity=".95" '
+            f'stroke="{INK}" stroke-width=".08" textLength="322" lengthAdjust="spacing">{esc(line)}</text>'
         )
-    frame.append(f'<text class="f"{d(0.95)} x="604" y="388" {ff("mono", 8.1, MUTED)} letter-spacing="1.3">PORTRAIT / 2026</text>')
-    frame.append(f'<text class="f"{d(0.95)} x="836" y="388" {ff("mono", 8.1, MUTED)} letter-spacing="1.3" anchor="end">DHAKA</text>')
+    art.append('</g>')
+    frame = ["".join(art)]
 
     left = [
         kicker(PAD, 46, "EAGOX STUDIO / INDEPENDENT SOFTWARE", delay=0.05),
@@ -160,14 +153,16 @@ def render_hero(data, portrait_b64):
         vrule(336, 348, 388, RULE),
         f'<text class="f"{d(1.05)} x="{PAD}" y="412" {ff("mono", 8.6, MUTED)} letter-spacing=".4">alshahriarsayon.vercel.app</text>',
         arrow(176, 412, MUTED, 10, delay=1.1),
-        vrule(568, 76, 366, RULE),
+        vrule(478, 58, 396, RULE),
     ]
-    ensure_fits(C.IDENTITY["title"], "sans", 16.5, 500, "hero title")
-    ensure_fits(C.IDENTITY["tagline"], "mono", 10.1, 500, "hero tagline")
+    ensure_fits(C.IDENTITY["title"], "sans", 16.5, 436, "hero title")
+    ensure_fits(C.IDENTITY["tagline"], "mono", 10.1, 436, "hero tagline")
+    ensure_fits(C.IDENTITY["name_lines"][0], "serif", 96, 436, "hero name")
     body = "".join(left + frame)
     label = (f'{C.IDENTITY["name"]} - {C.IDENTITY["title"]}. Founder of EAGOX Studio. '
-             "Portrait, location and headline product counts.")
-    return svg_doc(W, H, body, label, fonts=("serif", "serif-i", "sans", "mono"), pad_bottom=14)
+             "ASCII portrait, location, flagship version and headline product facts.")
+    return svg_doc(W, H, body, label, fonts=("serif", "serif-i", "sans", "mono"),
+                   css=ASCII_CSS if K.MOTION else "", pad_bottom=14)
 
 
 # ---- profile tiles ---------------------------------------------------------
@@ -414,10 +409,102 @@ def render_work_title():
     H = 96
     body = [
         kicker(PAD, 36, "04 / SELECTED WORK", delay=0.05),
-        heading(PAD, 80, "Six products, ", "built and shipped", size=31, max_width=700, delay=0.1),
-        f'<text class="f"{d(0.16)} x="{RIGHT}" y="36" {ff("mono", 8.4, MUTED)} text-anchor="end" letter-spacing="1.1">06 PRODUCTS · 04 PLATFORMS</text>',
+        heading(PAD, 80, "SeedCode CLI, ", "and the work around it", size=31, max_width=700, delay=0.1),
+        f'<text class="f"{d(0.16)} x="{RIGHT}" y="36" {ff("mono", 8.4, MUTED)} text-anchor="end" letter-spacing="1.1">01 FLAGSHIP · 05 MORE</text>',
     ]
-    return svg_doc(W, H, "".join(body), "Selected work: six products built and shipped.", fonts=("serif", "serif-i", "mono"))
+    return svg_doc(W, H, "".join(body), "Selected work led by SeedCode CLI, the flagship AI coding agent, followed by five more products.", fonts=("serif", "serif-i", "mono"))
+
+
+def render_subsection(label, right):
+    """A slim section rail: used to separate the product suite from experiments."""
+    H = 76
+    body = [
+        kicker(PAD, 36, label, color=ACCENT, delay=0.05),
+        f'<text class="f"{d(0.12)} x="{RIGHT}" y="36" {ff("mono", 8.4, MUTED)} text-anchor="end" letter-spacing="1.1">{esc(right)}</text>',
+        f'<line class="b"{d(0.18)} x1="{PAD}" y1="52" x2="{RIGHT}" y2="52" stroke="{RULE}"/>',
+    ]
+    return svg_doc(W, H, "".join(body), f"{label} section: {right.lower()}.", fonts=("mono",), pad_bottom=14)
+
+
+def render_featured(project):
+    """Full-width flagship showcase for SeedCode CLI."""
+    H = 450
+    title_size = K.fit_size(project["name"], "serif", 430, 64, 46)
+    desc_size, desc_lines = fit_lines(project["desc"], "sans", 12.8, 430, 3)
+    body = [
+        kicker(PAD, 45, "01 / FLAGSHIP PROJECT", color=ACCENT, delay=0.05),
+        f'<text class="f"{d(0.10)} x="{RIGHT}" y="45" {ff("mono", 8.5, MUTED)} text-anchor="end" letter-spacing="1.1">SEEDCODE CLI · {esc(project["version"])}</text>',
+        f'<line class="b"{d(0.14)} x1="{PAD}" y1="64" x2="{RIGHT}" y2="64" stroke="{RULE}"/>',
+        f'<text class="r"{d(0.18)} x="{PAD}" y="122" {ff("serif", title_size, INK)} letter-spacing="-1.2">{esc(project["name"])}</text>',
+        f'<text class="f"{d(0.24)} x="{PAD}" y="148" {ff("mono", 9.2, ACCENT)} letter-spacing="1.6">AI CODING AGENT FOR THE TERMINAL</text>',
+    ]
+    for i, line in enumerate(desc_lines):
+        body.append(f'<text class="f"{d(0.28 + i * 0.04)} x="{PAD}" y="{176 + i * 17.5:.1f}" {ff("sans", desc_size, SOFT)}>{esc(line)}</text>')
+
+    for i, (label, detail) in enumerate(project["features"]):
+        col, row = i % 2, i // 2
+        x, y = PAD + col * 214, 234 + row * 46
+        body.append(f'<rect class="p"{d(0.36 + row * 0.04)} x="{x}" y="{y - 7}" width="4" height="4" fill="{ACCENT}"/>')
+        body.append(f'<text class="f"{d(0.38 + row * 0.04)} x="{x + 10}" y="{y}" {ff("mono", 8.0, INK)} letter-spacing=".9">{esc(label)}</text>')
+        detail_lines = K.wrap_px(detail, "sans", 10.2, 192)
+        for j, detail_line in enumerate(detail_lines[:2]):
+            body.append(f'<text class="f"{d(0.40 + j * 0.03 + row * 0.04)} x="{x + 10}" y="{y + 15 + j * 11.5:.1f}" {ff("sans", 10.2, MUTED)}>{esc(detail_line)}</text>')
+
+    body.append(f'<text class="f"{d(0.52)} x="{PAD}" y="340" {ff("mono", 8.2, ACCENT)} letter-spacing="1.1">{esc(project["platforms"])}</text>')
+    body.append(f'<text class="f"{d(0.55)} x="{PAD}" y="356" {ff("mono", 7.8, MUTED)} letter-spacing=".8">{esc(project["tech"])}</text>')
+
+    panel = [
+        f'<rect class="f"{d(0.20)} x="496" y="80" width="340" height="254" rx="9" fill="#0c0c0e" stroke="{RULE}"/>',
+        f'<line x1="496" y1="112" x2="836" y2="112" stroke="{RULE}"/>',
+        f'<circle cx="514" cy="96" r="2.5" fill="{ACCENT}" fill-opacity=".8"/>',
+        f'<circle cx="524" cy="96" r="2.5" fill="{RULE_HI}"/>',
+        f'<circle cx="534" cy="96" r="2.5" fill="{RULE_HI}"/>',
+        f'<text x="550" y="100" {ff("mono", 7.6, FAINT)} letter-spacing=".6">seedcode / workspace agent</text>',
+        f'<text x="822" y="100" {ff("mono", 7.2, MUTED)} text-anchor="end" letter-spacing=".8">READY</text>',
+        f'<circle cx="830" cy="97" r="2" fill="{ACCENT}"/>',
+    ]
+    terminal_lines = [
+        ("$", "seedcode", ACCENT, INK),
+        (">", "read README.md", MUTED, SOFT),
+        ("+", "read README.md", ACCENT, SOFT),
+        (">", "pytest -q", MUTED, SOFT),
+        ("+", "tests passed · exit 0", ACCENT, SOFT),
+        (">", "edit app.py", MUTED, SOFT),
+        ("+", "updated app.py · +12 -5", ACCENT, SOFT),
+    ]
+    for i, (prefix, line, prefix_color, line_color) in enumerate(terminal_lines):
+        y = 140 + i * 18
+        panel.append(f'<text class="f"{d(0.34 + i * 0.015)} x="514" y="{y}" {ff("mono", 8.2, prefix_color)}>{prefix}</text>')
+        panel.append(f'<text class="f"{d(0.35 + i * 0.015)} x="528" y="{y}" {ff("mono", 8.2, line_color)}>{esc(line)}</text>')
+    panel.append(f'<text class="f"{d(0.5)} x="514" y="280" {ff("mono", 7.2, FAINT)}>workspace ~/projects/app</text>')
+    panel.append(f'<text class="f"{d(0.54)} x="514" y="296" {ff("mono", 7.2, FAINT)}>local + cloud · 27 tools</text>')
+    panel.append(f'<text class="f"{d(0.58)} x="514" y="312" {ff("mono", 7.2, ACCENT)}>evidence, not claims</text>')
+    panel.append(f'<text class="f"{d(0.66)} x="496" y="348" {ff("mono", 7.2, FAINT)} letter-spacing=".5">REAL FILES · REAL COMMANDS · REAL RESULTS</text>')
+    body.extend(panel)
+
+    body.append(f'<line class="b"{d(0.62)} x1="{PAD}" y1="366" x2="{RIGHT}" y2="366" stroke="{RULE}"/>')
+    stat_x = (PAD, 240, 400, 580)
+    stat_sizes = (22, 22, 22, 20)
+    for i, (value, label) in enumerate(project["stats"]):
+        body.append(stat_cell(stat_x[i], 398, value, label, delay=0.64 + i * 0.04, value_size=stat_sizes[i]))
+        if i:
+            body.append(vrule(stat_x[i] - 20, 380, 424, RULE))
+
+    web = project["live"].replace("https://", "").rstrip("/")
+    repo = project["repo"].replace("https://", "")
+    body.append(f'<text class="f"{d(0.86)} x="{PAD}" y="440" {ff("mono", 8.8, ACCENT)} letter-spacing=".3">{web} ↗</text>')
+    body.append(f'<text class="f"{d(0.9)} x="{RIGHT}" y="440" {ff("mono", 7.8, SOFT)} text-anchor="end">{repo} ↗</text>')
+
+    ensure_fits(project["name"], "serif", title_size, 430, "featured title")
+    ensure_fits("AI CODING AGENT FOR THE TERMINAL", "mono", 9.2, 430, "featured category")
+    ensure_fits(project["platforms"], "mono", 8.2, 430, "featured platforms")
+    ensure_fits(project["tech"], "mono", 7.8, 430, "featured tech")
+    ensure_fits(web + " ↗", "mono", 8.8, 420, "featured website")
+    ensure_fits(repo + " ↗", "mono", 7.8, 300, "featured repository")
+    label = (f'{project["name"]} {project["version"]} - flagship AI coding agent for the terminal on Windows, Linux and macOS. '
+             f'Reads the project, edits real files, runs commands and verifies results. '
+             f'Official website {project["live"]} and GitHub repository {project["repo"]}.')
+    return svg_doc(W, H, "".join(body), label, fonts=("serif", "sans", "mono"), pad_bottom=14)
 
 
 def render_project(project, delay):
@@ -560,15 +647,6 @@ def load_data(path):
     return data
 
 
-def portrait_data():
-    path = os.path.join(HERE, "assets", "portrait.webp")
-    if not os.path.exists(path):
-        print("preparing portrait ...")
-        prep_portrait.prepare()
-    with open(path, "rb") as fh:
-        return base64.b64encode(fh.read()).decode("ascii")
-
-
 def write(out_dir, rel_path, text):
     path = os.path.join(out_dir, rel_path)
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -590,17 +668,24 @@ def update_readme_stamp(readme_path, data):
         print(f"  updated refresh stamp in {os.path.basename(readme_path)}")
 
 
-def generate(out_dir, data, portrait_b64, stamp=False):
+def generate(out_dir, data, ascii_rows, stamp=False):
     print(f"rendering {'STATIC' if not K.MOTION else 'animated'} cards -> {out_dir}")
-    write(out_dir, "hero.svg", render_hero(data, portrait_b64))
+    print(f"  portrait: {len(ascii_rows)} rows x {len(ascii_rows[0])} characters")
+    write(out_dir, "hero.svg", render_hero(data, ascii_rows))
     for i, tile in enumerate(C.TILES):
         write(out_dir, f'{tile["slug"]}.svg', render_tile(tile, 1.22 + i * 0.08))
     write(out_dir, "about.svg", render_about(data))
     write(out_dir, "monthly-activity.svg", render_activity(data))
     write(out_dir, "contribution-graph.svg", render_heatmap(data))
     write(out_dir, "title-work.svg", render_work_title())
-    for i, project in enumerate(C.PROJECTS):
+    featured = C.PROJECTS[0]
+    if not featured.get("flagship"):
+        raise AssertionError("the first project must be the SeedCode CLI flagship")
+    write(out_dir, f'projects/{featured["slug"]}.svg', render_featured(featured))
+    write(out_dir, "rail-products.svg", render_subsection("MORE PRODUCTS", "04 BUILDS"))
+    for i, project in enumerate(C.PROJECTS[1:]):
         write(out_dir, f'projects/{project["slug"]}.svg', render_project(project, 2.95 + i * 0.1))
+    write(out_dir, "rail-experiments.svg", render_subsection("EXPERIMENTS & TOOLS", "01 SIDE BUILD"))
     write(out_dir, "skills.svg", render_skills(data))
     write(out_dir, "experience.svg", render_experience(data))
     write(out_dir, "education.svg", render_education(data))
@@ -625,7 +710,8 @@ def main(argv=None):
     if data.get("sample") and out_dir == os.path.abspath(os.path.join(HERE, "cards")):
         raise SystemExit("refusing to render a SAMPLE fixture into cards/. Use --out for tests.")
 
-    generate(out_dir, data, portrait_data(), stamp=args.stamp or out_dir == os.path.abspath(os.path.join(HERE, "cards")))
+    ascii_rows = A.load_rows()
+    generate(out_dir, data, ascii_rows, stamp=args.stamp or out_dir == os.path.abspath(os.path.join(HERE, "cards")))
 
     if not args.no_check:
         import validate_output

@@ -373,9 +373,11 @@ def tile_icon(x, y, slug, color=SOFT):
         return (f'<path d="M{x+3:g} {y+5:g} h24 v20 h-24 z" stroke="{c}" stroke-width="1.3" fill="none" stroke-linejoin="round"/>'
                 f'<path d="M{x+6:g} {y+18:g} l5 -5 4 4 3 -3 6 6" stroke="{c}" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
                 f'<circle cx="{x+22:g}" cy="{y+11:g}" r="2" fill="{c}"/>')
-    if slug == "github":
-        return (f'<path d="M{x+15:g} {y+3:g} a12 12 0 0 0 -3.8 23.4 c.6.1.8-.3.8-.6 v-2.2 c-3.3.7-4-1.4-4-1.4 -.5-1.4-1.3-1.8-1.3-1.8 -1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6 -2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2 -.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 a11.5 11.5 0 0 1 6 0 c2.3-1.5 3.3-1.2 3.3-1.2 .6 1.7.2 2.9.1 3.2 .8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2 v3.3 c0 .3.2.7.8.6 A12 12 0 0 0 {x+15:g} {y+3:g} z" fill="{c}"/>')
     if slug == "linkedin":
         return (f'<rect x="{x+3:g}" y="{y+3:g}" width="24" height="24" rx="3" stroke="{c}" stroke-width="1.3" fill="none"/>'
                 f'<path d="M{x+9:g} {y+12:g} v9 M{x+9:g} {y+8:g} v.1 M{x+14:g} {y+21:g} v-9 M{x+14:g} {y+15:g} c0-2 4-2.2 4 0 v6" stroke="{c}" stroke-width="1.5" fill="none" stroke-linecap="round"/>')
+    if slug == "instagram":
+        return (f'<rect x="{x+3:g}" y="{y+3:g}" width="24" height="24" rx="7" stroke="{c}" stroke-width="1.3" fill="none"/>'
+                f'<circle cx="{x+15:g}" cy="{y+15:g}" r="6.1" stroke="{c}" stroke-width="1.3" fill="none"/>'
+                f'<circle cx="{x+21.3:g}" cy="{y+8.7:g}" r="1.2" fill="{c}"/>')
     return ""

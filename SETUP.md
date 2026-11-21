@@ -11,17 +11,19 @@ runtime dependencies in the rendered images.
 ```
 README.md                     the profile page, assembled from cards
 generate_cards.py             renders every SVG card
-cards/                        generated: hero, tiles, about, activity, heatmap, skills, ...
-cards/projects/               generated: six product cards
+cards/                        generated: hero, three profile tiles, section rails, activity, ...
+cards/projects/               generated: flagship SeedCode CLI showcase + five product cards
 data/contributions.json       real contribution data, refreshed daily
 scripts/content.py            all personal copy, links, products, roles, education
 scripts/svg_kit.py            palette, fonts, motion, text measurement, SVG wrapper
 scripts/fetch_contributions.py GraphQL first, public calendar fallback
-scripts/prep_portrait.py      crops/compresses the real portrait for the hero
+scripts/make_ascii_svg.py     renders the 180x96 character portrait from me.png
+scripts/prep_portrait.py      crops/compresses the source photo (optional WebP asset)
 scripts/validate_output.py    XML, safety, glyph, README and mode validation
 fonts/                        licensed subset WOFF files, embedded per card
-assets/me.png                 original portrait (the generator derives the crop)
-assets/portrait.webp          generated 4:5 portrait embedded in hero.svg
+assets/me.png                 original portrait (never modified)
+assets/me_ascii.svg           transparent character portrait (hero rows + standalone)
+assets/portrait.webp          generated 4:5 photo (kept as a source asset)
 .github/workflows/refresh-profile.yml daily + manual refresh
 ```
 
@@ -131,9 +133,13 @@ is safer and works for this profile.
 - Copy, links, projects, skills, experience and education live in
   `scripts/content.py`. Edit that file, then run `python generate_cards.py`.
 - Do not hand-edit files in `cards/`; they are overwritten.
-- The portrait is derived from `assets/me.png` by `scripts/prep_portrait.py`
-  (4:5 crop, mono, WebP). Replace the source photo and delete
-  `assets/portrait.webp`, then regenerate. The original is never modified.
+- The hero portrait is a 180x96 character grid generated from `assets/me.png`
+  by `scripts/make_ascii_svg.py` into `assets/me_ascii.svg`. The hero and the
+  standalone transparent asset use the same rows. Replace the photo and delete
+  `assets/me_ascii.svg`, then regenerate. The original is never modified.
+  `scripts/prep_portrait.py` still produces the 4:5 `assets/portrait.webp`.
+- The three profile tiles are defined in `TILES` in `scripts/content.py`; the
+  README row shows them at 32.5% width.
 - Colors, type and motion live in `scripts/svg_kit.py`.
 - The README only needs to change if you add or rename a card.
 
