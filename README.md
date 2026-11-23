@@ -1,4 +1,4 @@
-<!-- refreshed: 2026-11-22 | github-graphql -->
+<!-- refreshed: 2026-11-23 | github-graphql -->
 <!-- Profile README. All cards are generated SVGs; edit scripts/content.py, then run `python generate_cards.py`. -->
 
 <div align="center">
