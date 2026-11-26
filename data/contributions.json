@@ -1,25 +1,25 @@
 {
   "schema_version": 1,
   "username": "Alshahriar-07",
-  "generated_at": "2026-11-25T14:36:02Z",
+  "generated_at": "2026-11-26T14:00:49Z",
   "source": "github-graphql",
   "source_label": "GitHub GraphQL API",
   "sample": false,
   "range": {
-    "from": "2025-11-26",
-    "to": "2026-11-25"
+    "from": "2025-11-27",
+    "to": "2026-11-26"
   },
   "total_contributions": 713,
   "active_days": 232,
   "tracked_days": 365,
   "avg_per_active_day": 3.07,
-  "current_streak": 7,
+  "current_streak": 8,
   "longest_streak": 28,
   "longest_streak_range": {
     "from": "2026-07-06",
     "to": "2026-08-02"
   },
-  "last_active": "2026-11-25",
+  "last_active": "2026-11-26",
   "best_day": {
     "date": "2026-08-10",
     "count": 29
@@ -27,8 +27,8 @@
   "current_month": {
     "month": "2026-11",
     "label": "NOV",
-    "total": 98,
-    "active_days": 19,
+    "total": 100,
+    "active_days": 20,
     "best_day": {
       "date": "2026-11-24",
       "count": 24
@@ -36,16 +36,16 @@
     "previous_month": "2026-10",
     "previous_total": 79,
     "trend_previous_total": 64,
-    "trend_basis": "OCT 1-25",
+    "trend_basis": "OCT 1-26",
     "partial": true,
-    "trend_pct": 53
+    "trend_pct": 56
   },
   "monthly": [
     {
       "month": "2025-11",
       "label": "NOV",
-      "total": 11,
-      "active_days": 5,
+      "total": 9,
+      "active_days": 4,
       "days_in_month": 30,
       "best_day": {
         "date": "2025-11-27",
@@ -176,8 +176,8 @@
     {
       "month": "2026-11",
       "label": "NOV",
-      "total": 98,
-      "active_days": 19,
+      "total": 100,
+      "active_days": 20,
       "days_in_month": 30,
       "best_day": {
         "date": "2026-11-24",
@@ -186,11 +186,6 @@
     }
   ],
   "days": [
-    {
-      "date": "2025-11-26",
-      "count": 2,
-      "level": 1
-    },
     {
       "date": "2025-11-27",
       "count": 5,
@@ -2010,6 +2005,11 @@
       "date": "2026-11-25",
       "count": 7,
       "level": 3
+    },
+    {
+      "date": "2026-11-26",
+      "count": 2,
+      "level": 1
     }
   ]
 }
