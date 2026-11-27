@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "username": "Alshahriar-07",
-  "generated_at": "2026-11-26T14:00:49Z",
+  "generated_at": "2026-11-27T13:59:19Z",
   "source": "github-graphql",
   "source_label": "GitHub GraphQL API",
   "sample": false,
   "range": {
-    "from": "2025-11-27",
-    "to": "2026-11-26"
+    "from": "2025-11-28",
+    "to": "2026-11-27"
   },
-  "total_contributions": 713,
-  "active_days": 232,
+  "total_contributions": 708,
+  "active_days": 231,
   "tracked_days": 365,
-  "avg_per_active_day": 3.07,
+  "avg_per_active_day": 3.06,
   "current_streak": 8,
   "longest_streak": 28,
   "longest_streak_range": {
@@ -35,21 +35,21 @@
     },
     "previous_month": "2026-10",
     "previous_total": 79,
-    "trend_previous_total": 64,
-    "trend_basis": "OCT 1-26",
+    "trend_previous_total": 65,
+    "trend_basis": "OCT 1-27",
     "partial": true,
-    "trend_pct": 56
+    "trend_pct": 54
   },
   "monthly": [
     {
       "month": "2025-11",
       "label": "NOV",
-      "total": 9,
-      "active_days": 4,
+      "total": 4,
+      "active_days": 3,
       "days_in_month": 30,
       "best_day": {
-        "date": "2025-11-27",
-        "count": 5
+        "date": "2025-11-29",
+        "count": 2
       }
     },
     {
@@ -186,11 +186,6 @@
     }
   ],
   "days": [
-    {
-      "date": "2025-11-27",
-      "count": 5,
-      "level": 2
-    },
     {
       "date": "2025-11-28",
       "count": 1,
@@ -2010,6 +2005,11 @@
       "date": "2026-11-26",
       "count": 2,
       "level": 1
+    },
+    {
+      "date": "2026-11-27",
+      "count": 0,
+      "level": 0
     }
   ]
 }
